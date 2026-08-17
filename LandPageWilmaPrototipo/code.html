@@ -557,7 +557,7 @@
 <p class="font-body-lg text-body-lg text-surface-variant mb-8 opacity-90">
                     Leve a arte e a mensagem de Wilma Machado para sua igreja, evento ou conferência. Momentos de louvor, reflexão e beleza acústica.
                 </p>
-<button class="border border-inverse-primary text-inverse-primary px-8 py-4 rounded hover:bg-white/10 transition-all duration-300 font-label-md text-label-md uppercase tracking-widest w-full sm:w-auto hover:-translate-y-1">
+<button id="appointment-trigger" class="border border-inverse-primary text-inverse-primary px-8 py-4 rounded hover:bg-white/10 transition-all duration-300 font-label-md text-label-md uppercase tracking-widest w-full sm:w-auto hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" type="button" aria-haspopup="dialog" aria-controls="appointment-dialog">
                     Solicitar Agenda
                 </button>
 </div>
@@ -625,6 +625,57 @@
 </div>
 </div>
 </footer>
+<div id="appointment-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="appointment-title" aria-describedby="appointment-summary">
+    <div class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" data-appointment-close aria-hidden="true"></div>
+    <section class="terms-dialog-panel relative flex max-h-[calc(100dvh-2rem)] w-full max-w-2xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-outline-variant/50 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-primary uppercase tracking-[0.2em]">Wilma Machado</p>
+                <h2 id="appointment-title" class="font-headline-md text-headline-md mt-2 text-on-surface">Solicitação de Agendamento</h2>
+            </div>
+            <button id="appointment-close" class="-mr-2 -mt-2 rounded-full p-2 text-on-surface-variant transition-colors duration-300 hover:bg-primary/10 hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" type="button" aria-label="Fechar solicitação de agendamento">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <form id="appointment-form" class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8" novalidate>
+            <p id="appointment-summary" class="font-body-md text-body-md text-on-surface-variant">Preencha os dados abaixo. Ao enviar, serão abertos seu e-mail e o WhatsApp da assessoria com a solicitação pronta para revisão e envio.</p>
+            <div id="appointment-error-summary" class="mt-5 hidden rounded-lg border border-error/30 bg-error-container px-4 py-3 text-on-error-container" role="alert" tabindex="-1" aria-labelledby="appointment-error-title">
+                <p id="appointment-error-title" class="font-label-md text-label-md">Verifique os campos indicados antes de continuar.</p>
+            </div>
+            <div class="mt-7 grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div class="sm:col-span-2">
+                    <label class="font-label-md text-label-md text-on-surface" for="appointment-name">Nome</label>
+                    <input id="appointment-name" name="name" class="mt-2 w-full rounded border border-outline-variant bg-surface px-4 py-3 text-on-surface transition-colors placeholder:text-on-surface-variant/70 focus:border-primary focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary" type="text" autocomplete="name" required aria-describedby="appointment-name-error" />
+                    <p id="appointment-name-error" class="mt-2 hidden text-sm text-error"></p>
+                </div>
+                <div>
+                    <label class="font-label-md text-label-md text-on-surface" for="appointment-contact">Contato / organização</label>
+                    <input id="appointment-contact" name="contact" class="mt-2 w-full rounded border border-outline-variant bg-surface px-4 py-3 text-on-surface transition-colors placeholder:text-on-surface-variant/70 focus:border-primary focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary" type="text" autocomplete="organization" required aria-describedby="appointment-contact-error" />
+                    <p id="appointment-contact-error" class="mt-2 hidden text-sm text-error"></p>
+                </div>
+                <div>
+                    <label class="font-label-md text-label-md text-on-surface" for="appointment-email">E-mail</label>
+                    <input id="appointment-email" name="email" class="mt-2 w-full rounded border border-outline-variant bg-surface px-4 py-3 text-on-surface transition-colors placeholder:text-on-surface-variant/70 focus:border-primary focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary" type="email" autocomplete="email" required aria-describedby="appointment-email-error" />
+                    <p id="appointment-email-error" class="mt-2 hidden text-sm text-error"></p>
+                </div>
+                <div class="sm:col-span-2">
+                    <label class="font-label-md text-label-md text-on-surface" for="appointment-phone">Celular</label>
+                    <input id="appointment-phone" name="phone" class="mt-2 w-full rounded border border-outline-variant bg-surface px-4 py-3 text-on-surface transition-colors placeholder:text-on-surface-variant/70 focus:border-primary focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="appointment-phone-error" />
+                    <p id="appointment-phone-error" class="mt-2 hidden text-sm text-error"></p>
+                </div>
+                <div class="sm:col-span-2">
+                    <label class="font-label-md text-label-md text-on-surface" for="appointment-message">Descrição ou pedido</label>
+                    <textarea id="appointment-message" name="message" class="mt-2 min-h-32 w-full resize-y rounded border border-outline-variant bg-surface px-4 py-3 text-on-surface transition-colors placeholder:text-on-surface-variant/70 focus:border-primary focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary" required aria-describedby="appointment-message-error"></textarea>
+                    <p id="appointment-message-error" class="mt-2 hidden text-sm text-error"></p>
+                </div>
+            </div>
+            <div class="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <p class="text-sm text-on-surface-variant">O envio final é confirmado por você nos aplicativos abertos.</p>
+                <button class="bg-primary-container px-6 py-3 text-on-primary-container rounded transition-all duration-300 hover:bg-primary hover:text-on-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="submit">Enviar solicitação</button>
+            </div>
+        </form>
+    </section>
+</div>
 <div id="terms-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="terms-title" aria-describedby="terms-summary">
     <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-terms-close aria-label="Fechar termos de uso"></button>
     <section class="terms-dialog-panel relative flex max-h-[calc(100dvh-2rem)] w-full max-w-2xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
@@ -646,7 +697,7 @@
                 </section>
                 <section>
                     <h3 class="font-title-md text-title-md text-on-surface">Dados pessoais</h3>
-                    <p class="mt-2">Nesta versão, o site não oferece cadastro, login ou formulário para envio de mensagens. Se uma funcionalidade que trate dados pessoais for adicionada, este aviso deverá informar, antes da coleta, o responsável pelo tratamento, as finalidades, a base legal, os compartilhamentos, a retenção e o canal de atendimento.</p>
+                    <p class="mt-2">Nesta versão, o site disponibiliza um formulário de solicitação de agendamento. Ao escolher enviar, seus dados são organizados em uma mensagem para o seu aplicativo de e-mail e em uma cópia para o WhatsApp da assessoria; o envio final é confirmado por você nesses aplicativos. Caso novas formas de tratamento sejam adicionadas, este aviso deverá informar, antes da coleta, o responsável pelo tratamento, as finalidades, a base legal, os compartilhamentos, a retenção e o canal de atendimento.</p>
                 </section>
                 <section>
                     <h3 class="font-title-md text-title-md text-on-surface">Direitos do titular</h3>
@@ -747,4 +798,5 @@
             }
         });
     </script>
+    <script src="appointment-request.js"></script>
 </body></html>
