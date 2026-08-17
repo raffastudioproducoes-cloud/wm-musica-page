@@ -219,11 +219,17 @@
             outline: none;
         }
 
-        #terms-dialog > [data-terms-close] {
+        #terms-dialog > [data-terms-close],
+        #literature-dialog > [data-literature-close],
+        #dedinho-dialog > [data-dedinho-close],
+        #community-dialog > [data-community-close] {
             background: rgba(30, 27, 26, 0.62);
         }
 
-        #terms-dialog .terms-dialog-panel {
+        #terms-dialog .terms-dialog-panel,
+        #literature-dialog .terms-dialog-panel,
+        #dedinho-dialog .terms-dialog-panel,
+        #community-dialog .terms-dialog-panel {
             color: #f6efed;
             background:
                 radial-gradient(circle at -4% -10%, rgba(240, 191, 107, 0.28) 0, rgba(240, 191, 107, 0.09) 25%, transparent 48%),
@@ -543,11 +549,11 @@
 <span class="font-label-md text-label-md text-primary uppercase tracking-widest text-xs mb-3 block">Projeto Musical</span>
 <h3 class="font-headline-md text-headline-md text-on-surface mb-4 text-2xl group-hover:text-primary transition-colors duration-300">Um Dedinho de Prosa</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
-                        Um espetáculo intimista onde a música se entrelaça com histórias do cotidiano e reflexões profundas. Uma experiência de escuta atenta e comunhão.
+                        Um espetáculo intimista onde a música se entrelaça com histórias do cotidiano e reflexões profundas.
                     </p>
-<a class="text-secondary font-label-md text-label-md flex items-center group-hover:text-primary transition-colors" href="#">
+<button id="dedinho-trigger" class="text-secondary font-label-md text-label-md flex items-center group-hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="button" aria-haspopup="dialog" aria-controls="dedinho-dialog">
                         Saiba mais <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
-</a>
+</button>
 </div>
 </div>
 <!-- Card 2 -->
@@ -559,11 +565,11 @@
 <span class="font-label-md text-label-md text-primary uppercase tracking-widest text-xs mb-3 block">Literatura</span>
 <h3 class="font-headline-md text-headline-md text-on-surface mb-4 text-2xl group-hover:text-primary transition-colors duration-300">Obras Literárias</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
-                        Explorando a palavra escrita como extensão da fé. Livros e crônicas que convidam o leitor a uma jornada de autoconhecimento e espiritualidade.
+                        A produção de Wilma Machado reúne literatura cristã, poesia, contos, relatos pessoais, reflexões, dramaturgia e materiais de formação musical.
                     </p>
-<a class="text-secondary font-label-md text-label-md flex items-center group-hover:text-primary transition-colors" href="#">
-                        Ver catálogo <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
-</a>
+<button id="literature-trigger" class="text-secondary font-label-md text-label-md flex items-center group-hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="button" aria-haspopup="dialog" aria-controls="literature-dialog">
+                        Ver Mais<span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
 </div>
 </div>
 <!-- Card 3 -->
@@ -575,11 +581,11 @@
 <span class="font-label-md text-label-md text-primary uppercase tracking-widest text-xs mb-3 block">Ação Comunitária</span>
 <h3 class="font-headline-md text-headline-md text-on-surface mb-4 text-2xl group-hover:text-primary transition-colors duration-300">Um por todos! Todos por um</h3>
 <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
-                        Iniciativa social que utiliza a arte e a música como ferramentas de transformação e inclusão em comunidades vulneráveis.
+                        O Projeto “Um por Todos! Todos por Um” é uma iniciativa cristã de evangelização associada à ação social. Sua proposta central é reunir igrejas, voluntários, famílias e comunidades em uma rede organizada de cuidado, solidariedade e anúncio do Evangelho.
                     </p>
-<a class="text-secondary font-label-md text-label-md flex items-center group-hover:text-primary transition-colors" href="#">
+<button id="community-trigger" class="text-secondary font-label-md text-label-md flex items-center group-hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="button" aria-haspopup="dialog" aria-controls="community-dialog">
                         Conheça a iniciativa <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
-</a>
+</button>
 </div>
 </div>
 </div>
@@ -730,6 +736,186 @@
         </form>
     </section>
 </div>
+<div id="community-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="community-title" aria-describedby="community-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-community-close aria-label="Fechar resumo do projeto Um por Todos Todos por Um"></button>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-inverse-primary/30 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-inverse-primary uppercase tracking-[0.2em]">Ação Comunitária</p>
+                <h2 id="community-title" class="font-headline-md text-headline-md mt-2 text-inverse-on-surface">Resumo do Projeto “Um por Todos! Todos por Um”</h2>
+            </div>
+            <button id="community-close" class="-mr-2 -mt-2 rounded-full p-2 text-surface-variant transition-colors duration-300 hover:bg-white/10 hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-primary" type="button" aria-label="Fechar resumo do projeto Um por Todos Todos por Um">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
+            <p id="community-summary" class="font-body-md text-body-md text-surface-variant">O Projeto <strong class="font-bold text-inverse-on-surface">“Um por Todos! Todos por Um”</strong> é uma iniciativa cristã de evangelização associada à ação social. Sua proposta central é reunir igrejas, voluntários, famílias e comunidades em uma rede organizada de cuidado, solidariedade e anúncio do Evangelho.</p>
+            <div class="mt-7 space-y-6 font-body-md text-body-md text-surface-variant">
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Uma rede de cuidado</h3>
+                    <p class="mt-2">De forma simples, o projeto parte da ideia de que uma pessoa, uma família ou uma instituição pode ajudar com aquilo que tem, e que a união de muitas pequenas contribuições pode gerar apoio real para quem enfrenta necessidades materiais, emocionais e espirituais.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Unidade e União</h3>
+                    <p class="mt-2">A principal característica do projeto é definida nos documentos como <strong class="font-bold text-inverse-on-surface">“Unidade e União”</strong>:</p>
+                    <ul class="mt-3 list-disc space-y-2 pl-5 marker:text-inverse-primary">
+                        <li><strong class="font-bold text-inverse-on-surface">Unidade</strong> entre igrejas cristãs, respeitando suas diferentes denominações e características;</li>
+                        <li><strong class="font-bold text-inverse-on-surface">União</strong> entre famílias, voluntários, líderes e moradores de uma mesma comunidade;</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Ação social e espiritual</strong> acontecendo juntas, com apoio prático e acompanhamento cristão.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Origem e desenvolvimento</h3>
+                    <p class="mt-2">O acervo indica que o projeto foi iniciado por <strong class="font-bold text-inverse-on-surface">Wilma Machado em março de 2011</strong>, no bairro de Jardim Bangu, no Rio de Janeiro. A ideia surgiu a partir da percepção de que uma família em situação de vulnerabilidade precisava de uma ajuda mais ampla e contínua do que uma única pessoa poderia oferecer. A proposta, então, foi mobilizar a comunidade e as igrejas locais para que cada família voluntária contribuísse com algum item, alimento, produto de higiene, serviço ou apoio possível.</p>
+                    <p class="mt-3">O projeto foi experimentado e desenvolvido ao longo de aproximadamente sete anos. Nesse período, foram criados documentos administrativos, registros de voluntários, relatórios, formulários de acolhimento, roteiros de visita, controles de doações, prestação de contas, materiais de formação e organização de campos missionários.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Formas de atendimento</h3>
+                    <p class="mt-2">A proposta não se limita à entrega de alimentos. O projeto prevê uma rede de atendimento que pode incluir:</p>
+                    <ul class="mt-3 list-disc space-y-2 pl-5 marker:text-inverse-primary">
+                        <li>Apoio alimentar para famílias em dificuldade;</li>
+                        <li>Visitas e acompanhamento de pessoas acolhidas;</li>
+                        <li>Encaminhamento e apoio a pessoas em situação de vulnerabilidade;</li>
+                        <li>Oração por enfermos e famílias;</li>
+                        <li>Cultos e encontros em casas;</li>
+                        <li>Discipulado e ensino bíblico;</li>
+                        <li>Registro de pedidos de oração;</li>
+                        <li>Participação de voluntários, igrejas e instituições parceiras;</li>
+                        <li>Organização de ofertas, recibos, inventário de bens e prestação de contas.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Participação das igrejas</h3>
+                    <p class="mt-2">Segundo os documentos, as igrejas podem participar como <strong class="font-bold text-inverse-on-surface">Igreja Sede</strong>, <strong class="font-bold text-inverse-on-surface">subSede</strong>, apoio distrital ou igrejas parceiras em um campo missionário. Cada função possui responsabilidades definidas, com orientações de planejamento, cadastro, atendimento, administração e acompanhamento das ações.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Segurança e transparência</h3>
+                    <p class="mt-2">O projeto também possui uma preocupação importante com segurança e transparência. Os materiais preveem identificação de voluntários, registros administrativos, documentação de participação, controle de doações e prestação de contas. A orientação é que as famílias atendidas possam verificar a identidade das pessoas que se apresentam em nome do projeto.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Formação e comunicação</h3>
+                    <p class="mt-2">Além da atuação prática nas comunidades, existe uma estrutura de formação e comunicação. O acervo reúne vídeos-palestras, roteiros, mapas de campo missionário, documentos de planejamento, materiais para site, documentos de inserção de igrejas e registros fotográficos e audiovisuais das ações. Há uma série planejada de doze vídeos-palestras para explicar a proposta, a organização e a aplicação do projeto.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Fé em ação</h3>
+                    <p class="mt-2">Em sua dimensão espiritual, o projeto se baseia na compreensão cristã de que fé e ação devem caminhar juntas. A proposta é anunciar o Evangelho ao mesmo tempo em que se procura atender necessidades concretas das pessoas, promovendo cuidado, esperança, acolhimento e fortalecimento da comunidade.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Síntese</h3>
+                    <p class="mt-2">O Projeto <strong class="font-bold text-inverse-on-surface">“Um por Todos! Todos por Um”</strong> é uma ferramenta missionária e social criada para transformar a solidariedade em uma rede organizada. Ele busca unir igrejas e comunidades para apoiar famílias em necessidade, fortalecer vínculos, promover valores cristãos e oferecer ajuda material e espiritual de forma contínua, planejada e responsável.</p>
+                </section>
+            </div>
+            <p class="mt-8 border-t border-inverse-primary/25 pt-5 text-sm text-surface-variant">O material analisado mostra uma estrutura ampla, composta por documentos de gestão, relatórios, registros de voluntários, controles administrativos, materiais de discipulado, roteiros de vídeos, imagens, registros de ações e conteúdos para divulgação digital. Os documentos também indicam a autoria e a coordenação de Wilma Machado durante o período experimental do projeto.</p>
+            <p class="mt-4 text-sm text-surface-variant">As informações deste resumo foram extraídas dos documentos internos do acervo. Referências a registros, datas, participação institucional, resultados e disponibilidade pública do projeto devem ser confirmadas diretamente nos documentos oficiais e nos canais institucionais correspondentes.</p>
+        </div>
+    </section>
+</div>
+<div id="dedinho-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="dedinho-title" aria-describedby="dedinho-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-dedinho-close aria-label="Fechar resumo do projeto Um Dedinho de Prosa"></button>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-inverse-primary/30 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-inverse-primary uppercase tracking-[0.2em]">Projeto Musical</p>
+                <h2 id="dedinho-title" class="font-headline-md text-headline-md mt-2 text-inverse-on-surface">Resumo do Projeto “Um Dedinho de Prosa”</h2>
+            </div>
+            <button id="dedinho-close" class="-mr-2 -mt-2 rounded-full p-2 text-surface-variant transition-colors duration-300 hover:bg-white/10 hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-primary" type="button" aria-label="Fechar resumo do projeto Um Dedinho de Prosa">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
+            <p id="dedinho-summary" class="font-body-md text-body-md text-surface-variant"><strong class="font-bold text-inverse-on-surface">Um Dedinho de Prosa com Wilma Machado</strong> é um quadro de vídeos criado para compartilhar reflexões sobre situações do cotidiano à luz das Escrituras. O projeto tem uma linguagem direta, pessoal e acolhedora, buscando conversar com o público sobre fé, família, escolhas, comportamento, relacionamentos, propósito de vida e experiências espirituais.</p>
+            <div class="mt-7 space-y-6 font-body-md text-body-md text-surface-variant">
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Proposta do quadro</h3>
+                    <p class="mt-2">A proposta apresentada nos próprios roteiros é fazer uma conversa leve e reflexiva, conduzida por Wilma Machado, com o objetivo de incentivar o público a pensar, fortalecer a fé e aplicar ensinamentos bíblicos na vida diária. Em vários episódios, a autora convida o espectador a “mastigar a Palavra”, isto é, refletir com calma sobre os textos bíblicos e suas mensagens.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Trajetória e continuidade</h3>
+                    <p class="mt-2">O acervo mostra que o projeto começou em <strong class="font-bold text-inverse-on-surface">maio de 2021</strong> e foi organizado em edições periódicas, inicialmente com proposta de publicação às quintas-feiras, às 22 horas. Há roteiros desde a 1ª edição, materiais de 2021 e 2022, um retorno documentado em fevereiro de 2024 e novos conteúdos em 2025. Os arquivos indicam, pelo menos, <strong class="font-bold text-inverse-on-surface">25 edições planejadas ou produzidas</strong> ao longo desse período.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Formato de cada edição</h3>
+                    <p class="mt-2">Cada edição segue uma estrutura parecida: música de abertura, saudação ao público, apresentação do tema, reflexão principal, referências bíblicas, momentos de testemunho ou experiência pessoal, convite para interação no canal e encerramento. Os roteiros também contêm indicações técnicas para gravação e edição, como cenário, entrada de música, legendas, imagens, cortes de vídeo e chamadas para inscrição, comentários, curtidas e compartilhamento.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Temas abordados</h3>
+                    <ul class="mt-3 list-disc space-y-2 pl-5 marker:text-inverse-primary">
+                        <li>A verdadeira felicidade;</li>
+                        <li>Relacionamentos e preparo emocional;</li>
+                        <li>Deus é detalhista?;</li>
+                        <li>Deus existe mesmo?;</li>
+                        <li>Fé, oração, escolhas e amadurecimento pessoal;</li>
+                        <li>Evangelização e missão cristã;</li>
+                        <li>Reflexões sobre acontecimentos sociais, familiares e cotidianos.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Uma produção completa</h3>
+                    <p class="mt-2">O material mostra que <strong class="font-bold text-inverse-on-surface">Um Dedinho de Prosa</strong> não é apenas uma série de falas para vídeo. Trata-se de uma produção completa, formada por textos, roteiros, músicas, vídeos brutos, vídeos editados, imagens, vinhetas, materiais de divulgação e orientações para publicação. O acervo possui dezenas de roteiros e uma grande quantidade de registros audiovisuais, demonstrando planejamento e continuidade do projeto.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">WMCIA e integração artística</h3>
+                    <p class="mt-2">A produção é ligada à <strong class="font-bold text-inverse-on-surface">WMCIA — Produção Musical e Literária</strong>, reunindo as diferentes áreas de atuação de Wilma Machado: escrita, música, canto, reflexão cristã e comunicação audiovisual. Algumas edições utilizam músicas de autoria de Wilma como introdução ou apoio à mensagem, reforçando a integração entre palavra e música.</p>
+                    <p class="mt-3">Também existe uma orientação de apresentação para o YouTube, com ficha técnica, informações de produção e proposta de temporada on-line. Isso indica que o projeto foi pensado para funcionar como um programa digital estruturado, com identidade própria e possibilidade de continuidade.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Síntese</h3>
+                    <p class="mt-2"><strong class="font-bold text-inverse-on-surface">Um Dedinho de Prosa com Wilma Machado</strong> é uma série de reflexões cristãs em vídeo que transforma temas do cotidiano em conversas sobre fé, comportamento, esperança e propósito. É um projeto autoral de comunicação e evangelização, construído com roteiros, música e produção audiovisual, voltado principalmente ao público que busca mensagens de inspiração e orientação espiritual.</p>
+                </section>
+            </div>
+            <p class="mt-8 border-t border-inverse-primary/25 pt-5 text-sm text-surface-variant">A leitura foi baseada nos roteiros e materiais existentes no acervo. Os dados sobre datas, quantidade de edições e formato do projeto foram identificados nos próprios arquivos; informações de publicação efetiva, audiência ou desempenho em plataformas devem ser confirmadas diretamente nos canais oficiais.</p>
+        </div>
+    </section>
+</div>
+<div id="literature-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="literature-title" aria-describedby="literature-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-literature-close aria-label="Fechar resumo da produção literária"></button>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-inverse-primary/30 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-inverse-primary uppercase tracking-[0.2em]">Obras Literárias</p>
+                <h2 id="literature-title" class="font-headline-md text-headline-md mt-2 text-inverse-on-surface">Resumo da Produção Literária de Wilma Machado</h2>
+            </div>
+            <button id="literature-close" class="-mr-2 -mt-2 rounded-full p-2 text-surface-variant transition-colors duration-300 hover:bg-white/10 hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-primary" type="button" aria-label="Fechar resumo da produção literária">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
+            <p id="literature-summary" class="font-body-md text-body-md text-surface-variant">A produção de Wilma Machado reúne literatura cristã, poesia, contos, relatos pessoais, reflexões, dramaturgia e materiais de formação musical. Sua escrita tem como eixo a fé, a evangelização, o cotidiano, a família, o propósito de vida e a transformação pessoal.</p>
+            <div class="mt-7 space-y-6 font-body-md text-body-md text-surface-variant">
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Principais obras literárias</h3>
+                    <p class="mt-2">Entre suas principais obras estão <strong class="font-bold text-inverse-on-surface">Trajetória de uma Escritora Cristã</strong>, livro autobiográfico sobre sua caminhada como autora e cristã; a <strong class="font-bold text-inverse-on-surface">Coletânea de Poemas — Tema: A Vida</strong>, que reúne textos sobre fé, esperança, dor, trabalho, criação e reflexão sobre a existência; e <strong class="font-bold text-inverse-on-surface">Contos de Wilma Machado — Conversas de Ponto de Ônibus</strong>, com narrativas curtas inspiradas em situações cotidianas, relações humanas e mensagens de caráter ético e espiritual.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Narrativas e reflexões</h3>
+                    <p class="mt-2">Outras obras importantes são <strong class="font-bold text-inverse-on-surface">O Mapa do Tesouro</strong>, uma dinâmica missionária voltada a crianças e adolescentes; <strong class="font-bold text-inverse-on-surface">Efeitos em Cadeia</strong>, com reflexões sobre atitudes, relações e consequências do cotidiano; e <strong class="font-bold text-inverse-on-surface">Cotidiano de uma Família</strong>, narrativa memorialística que retrata cenas da vida doméstica, lembranças e experiências pessoais.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Fé e testemunho</h3>
+                    <p class="mt-2">A autora também desenvolveu textos de inspiração e testemunho religioso, como <strong class="font-bold text-inverse-on-surface">Destravando a Mente</strong>, sobre propósito e transformação pessoal; <strong class="font-bold text-inverse-on-surface">Ao Pé da Letra</strong>, obra de reflexão cristã; <strong class="font-bold text-inverse-on-surface">Minhas Experiências com o Espírito Santo</strong>, relato de vivências espirituais; e <strong class="font-bold text-inverse-on-surface">O Silêncio de Deus</strong>, poema acompanhado de uma experiência pessoal sobre perdão, dor, fé e interioridade.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Teatro e relatos</h3>
+                    <p class="mt-2">Sua produção inclui ainda a peça teatral cantada <strong class="font-bold text-inverse-on-surface">A Volta de Jesus</strong>, obra dramática e musical voltada à evangelização, além de relatos como <strong class="font-bold text-inverse-on-surface">Sonhos — Igrejas Protestantes: Atenção</strong> e <strong class="font-bold text-inverse-on-surface">Sonhei com Bangu — RJ</strong>, apresentados pela autora como testemunhos de fé.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Formação musical</h3>
+                    <p class="mt-2">Além da literatura, Wilma Machado possui uma produção didático-musical relevante. Destacam-se <strong class="font-bold text-inverse-on-surface">Musicalizando entre Amigos — Teoria e Prática: Do Teclado ao Piano</strong>, <strong class="font-bold text-inverse-on-surface">Vocalises entre Amigos — Série 1</strong>, <strong class="font-bold text-inverse-on-surface">Vocalizando entre Amigos — Série 2</strong> e o <strong class="font-bold text-inverse-on-surface">Caderno de Exercícios — Vocalises entre Amigos</strong>. Esses materiais são voltados ao ensino de teclado, piano, canto, vocalização e formação de novos músicos.</p>
+                    <p class="mt-3">Também há a canção <strong class="font-bold text-inverse-on-surface">Deus é Maravilhoso</strong>, com letra e música atribuídas a Wilma Machado, reforçando a ligação entre sua escrita e sua produção musical.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Curadoria e colaborações</h3>
+                    <p class="mt-2">É importante diferenciar as obras autorais dos materiais de curadoria ou colaboração. O documento <strong class="font-bold text-inverse-on-surface">Pensamentos de Outros</strong>, por exemplo, reúne frases atribuídas a outros palestrantes e foi organizado por Wilma, mas não deve ser apresentado como uma obra integralmente autoral. Da mesma forma, alguns livros utilizam letras, imagens ou ilustrações de terceiros, devidamente creditados nos próprios documentos.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Síntese</h3>
+                    <p class="mt-2">Wilma Machado pode ser apresentada como <strong class="font-bold text-inverse-on-surface">escritora, poetisa, contista, dramaturga, autora de textos de reflexão cristã e criadora de materiais didáticos musicais</strong>. Sua obra reúne poesia, narrativas do cotidiano, relatos de fé, evangelização, teatro cantado e educação musical, formando uma trajetória artística marcada pela espiritualidade, pela palavra e pelo serviço ao próximo.</p>
+                </section>
+            </div>
+            <p class="mt-8 border-t border-inverse-primary/25 pt-5 text-sm text-surface-variant">A identificação de autoria foi baseada nos próprios documentos do acervo, como capas, assinaturas, metadados e expedientes editoriais. Informações sobre registros, publicação comercial ou direitos autorais devem ser confirmadas em documentos oficiais quando necessárias.</p>
+        </div>
+    </section>
+</div>
 <div id="terms-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="terms-title" aria-describedby="terms-summary">
     <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-terms-close aria-label="Fechar termos de uso"></button>
     <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-2xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
@@ -828,6 +1014,171 @@
         if (!focusableElements.length) {
             event.preventDefault();
             termsPanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    });
+
+    const literatureTrigger = document.getElementById('literature-trigger');
+    const literatureDialog = document.getElementById('literature-dialog');
+    const literaturePanel = literatureDialog?.querySelector('.terms-dialog-panel');
+    const literatureCloseControls = literatureDialog?.querySelectorAll('[data-literature-close], #literature-close');
+    let lastLiteratureFocusedElement;
+
+    const getLiteratureFocusableElements = () => literatureDialog ? Array.from(
+        literatureDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closeLiteratureDialog = () => {
+        if (!literatureDialog) return;
+        literatureDialog.classList.add('hidden');
+        literatureDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lastLiteratureFocusedElement?.focus();
+    };
+
+    const openLiteratureDialog = () => {
+        if (!literatureDialog) return;
+        lastLiteratureFocusedElement = document.activeElement;
+        literatureDialog.classList.remove('hidden');
+        literatureDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('literature-close')?.focus();
+    };
+
+    literatureTrigger?.addEventListener('click', openLiteratureDialog);
+    literatureCloseControls?.forEach((control) => control.addEventListener('click', closeLiteratureDialog));
+    literatureDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeLiteratureDialog();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getLiteratureFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            literaturePanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    });
+
+    const dedinhoTrigger = document.getElementById('dedinho-trigger');
+    const dedinhoDialog = document.getElementById('dedinho-dialog');
+    const dedinhoPanel = dedinhoDialog?.querySelector('.terms-dialog-panel');
+    const dedinhoCloseControls = dedinhoDialog?.querySelectorAll('[data-dedinho-close], #dedinho-close');
+    let lastDedinhoFocusedElement;
+
+    const getDedinhoFocusableElements = () => dedinhoDialog ? Array.from(
+        dedinhoDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closeDedinhoDialog = () => {
+        if (!dedinhoDialog) return;
+        dedinhoDialog.classList.add('hidden');
+        dedinhoDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lastDedinhoFocusedElement?.focus();
+    };
+
+    const openDedinhoDialog = () => {
+        if (!dedinhoDialog) return;
+        lastDedinhoFocusedElement = document.activeElement;
+        dedinhoDialog.classList.remove('hidden');
+        dedinhoDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('dedinho-close')?.focus();
+    };
+
+    dedinhoTrigger?.addEventListener('click', openDedinhoDialog);
+    dedinhoCloseControls?.forEach((control) => control.addEventListener('click', closeDedinhoDialog));
+    dedinhoDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeDedinhoDialog();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getDedinhoFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            dedinhoPanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    });
+
+    const communityTrigger = document.getElementById('community-trigger');
+    const communityDialog = document.getElementById('community-dialog');
+    const communityPanel = communityDialog?.querySelector('.terms-dialog-panel');
+    const communityCloseControls = communityDialog?.querySelectorAll('[data-community-close], #community-close');
+    let lastCommunityFocusedElement;
+
+    const getCommunityFocusableElements = () => communityDialog ? Array.from(
+        communityDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closeCommunityDialog = () => {
+        if (!communityDialog) return;
+        communityDialog.classList.add('hidden');
+        communityDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lastCommunityFocusedElement?.focus();
+    };
+
+    const openCommunityDialog = () => {
+        if (!communityDialog) return;
+        lastCommunityFocusedElement = document.activeElement;
+        communityDialog.classList.remove('hidden');
+        communityDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('community-close')?.focus();
+    };
+
+    communityTrigger?.addEventListener('click', openCommunityDialog);
+    communityCloseControls?.forEach((control) => control.addEventListener('click', closeCommunityDialog));
+    communityDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeCommunityDialog();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getCommunityFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            communityPanel?.focus();
             return;
         }
 
