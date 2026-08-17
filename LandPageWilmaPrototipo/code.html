@@ -222,14 +222,16 @@
         #terms-dialog > [data-terms-close],
         #literature-dialog > [data-literature-close],
         #dedinho-dialog > [data-dedinho-close],
-        #community-dialog > [data-community-close] {
+        #community-dialog > [data-community-close],
+        #privacy-dialog > [data-privacy-close] {
             background: rgba(30, 27, 26, 0.62);
         }
 
         #terms-dialog .terms-dialog-panel,
         #literature-dialog .terms-dialog-panel,
         #dedinho-dialog .terms-dialog-panel,
-        #community-dialog .terms-dialog-panel {
+        #community-dialog .terms-dialog-panel,
+        #privacy-dialog .terms-dialog-panel {
             color: #f6efed;
             background:
                 radial-gradient(circle at -4% -10%, rgba(240, 191, 107, 0.28) 0, rgba(240, 191, 107, 0.09) 25%, transparent 48%),
@@ -671,16 +673,16 @@
 </div>
 <div class="mt-24 pt-8 border-t border-outline-variant/20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
 <p class="font-body-md text-body-md text-on-surface-variant text-sm">
-                © 2024 Wilma Machado. Todos os direitos reservados. WMCIA Professional Association.
+                © 2024 Wilma Machado. Todos os direitos reservados. WMCIA.
             </p>
 <div class="flex space-x-6">
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300 text-xs uppercase" href="#">Privacidade</a>
+<button id="privacy-trigger" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300 text-xs uppercase focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="button" aria-haspopup="dialog" aria-controls="privacy-dialog">Privacidade</button>
 <button id="terms-trigger" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300 text-xs uppercase focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="button" aria-haspopup="dialog" aria-controls="terms-dialog">Termos de Uso</button>
 </div>
 </div>
 <div class="mt-6 flex justify-center px-margin-mobile md:px-margin-desktop">
-    <div class="flex items-center gap-3 opacity-60">
-        <img class="h-5 w-auto" src="raffastudio-logo.png" alt="Raffa Studio" />
+    <div class="flex items-center gap-3 opacity-100">
+        <img class="h-5 w-auto" src="Ativo 12artes.png" alt="Raffa Studio" />
         <p class="font-label-md text-[10px] uppercase tracking-[0.16em] text-on-surface-variant">® Raffa Studio · desde 2020</p>
     </div>
 </div>
@@ -734,6 +736,61 @@
                 <button class="bg-primary-container px-6 py-3 text-on-primary-container rounded transition-all duration-300 hover:bg-primary hover:text-on-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="submit">Enviar solicitação</button>
             </div>
         </form>
+    </section>
+</div>
+<div id="privacy-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="privacy-title" aria-describedby="privacy-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-privacy-close aria-label="Fechar aviso de privacidade"></button>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-inverse-primary/30 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-inverse-primary uppercase tracking-[0.2em]">Wilma Machado</p>
+                <h2 id="privacy-title" class="font-headline-md text-headline-md mt-2 text-inverse-on-surface">Aviso de Privacidade</h2>
+            </div>
+            <button id="privacy-close" class="-mr-2 -mt-2 rounded-full p-2 text-surface-variant transition-colors duration-300 hover:bg-white/10 hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-primary" type="button" aria-label="Fechar aviso de privacidade">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
+            <p id="privacy-summary" class="font-body-md text-body-md text-surface-variant">Este aviso explica como esta versão do site trata dados pessoais, em conformidade com os princípios de transparência, finalidade, necessidade e segurança previstos na Lei Geral de Proteção de Dados Pessoais — LGPD.</p>
+            <div class="mt-7 space-y-6 font-body-md text-body-md text-surface-variant">
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Escopo deste site</h3>
+                    <p class="mt-2">O site apresenta o trabalho de Wilma Machado e da WMCIA. Os painéis de obras, projetos e conteúdos institucionais apenas exibem informações na tela: eles não solicitam dados pessoais, não criam conta e não enviam dados por conta própria.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Dados informados no agendamento</h3>
+                    <p class="mt-2">Se você optar por preencher o formulário de solicitação de agendamento, os campos solicitam nome, contato ou organização, e-mail, celular e uma breve descrição do pedido. Esses dados são usados para estruturar sua solicitação de contato e agendamento.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Como o envio funciona</h3>
+                    <p class="mt-2">Nesta versão, o formulário não envia dados diretamente para um banco de dados ou servidor do site. Após a validação no seu navegador, ele prepara uma mensagem para seu aplicativo de e-mail e uma cópia para o WhatsApp da assessoria. O envio final só ocorre se você confirmar a ação nos respectivos aplicativos.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Finalidade e compartilhamento</h3>
+                    <p class="mt-2">Os dados enviados voluntariamente devem ser utilizados para responder ao pedido, organizar a agenda e manter a comunicação relacionada à solicitação. Ao usar links para e-mail, WhatsApp, Spotify, YouTube ou outras plataformas externas, você passa a interagir também com esses serviços, que possuem políticas próprias de privacidade. O site não declara compartilhar dados do formulário automaticamente com terceiros além dos aplicativos que você escolher abrir para concluir o envio.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Dados técnicos e conteúdo externo</h3>
+                    <p class="mt-2">Serviços de hospedagem, navegadores e plataformas externas podem tratar dados técnicos necessários ao seu funcionamento, como endereço IP, data, horário e informações do dispositivo, conforme suas próprias políticas. Antes de usar uma plataforma externa, consulte as condições e o aviso de privacidade dela.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Seus direitos</h3>
+                    <p class="mt-2">Nos termos da LGPD, o titular pode solicitar confirmação de tratamento, acesso, correção de dados incompletos ou desatualizados, informações sobre compartilhamento, anonimização, bloqueio ou eliminação nas hipóteses legais, portabilidade quando aplicável, revogação do consentimento e oposição a tratamento irregular.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Contato para privacidade</h3>
+                    <p class="mt-2">Para dúvidas, pedidos relacionados a dados pessoais ou exercício de direitos, entre em contato pelo e-mail <a class="text-inverse-primary underline decoration-inverse-primary/40 underline-offset-4 transition-colors hover:text-inverse-on-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="mailto:wmciaproducaomusical@gmail.com">wmciaproducaomusical@gmail.com</a>. Ao responder, o responsável pelo atendimento poderá solicitar apenas as informações necessárias para confirmar a identidade e atender o pedido com segurança.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Atualizações</h3>
+                    <p class="mt-2">Este aviso deverá ser atualizado antes da implantação de novas formas de coleta, armazenamento, cookies não essenciais, análises de navegação, integrações, compartilhamentos ou uso de dados para finalidades diferentes das descritas aqui.</p>
+                </section>
+            </div>
+            <div class="mt-8 border-t border-inverse-primary/25 pt-5">
+                <a class="font-label-md text-label-md text-inverse-primary underline decoration-inverse-primary/40 underline-offset-4 transition-colors hover:text-inverse-on-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm" target="_blank" rel="noopener noreferrer">Consultar a Lei nº 13.709/2018 (LGPD)</a>
+                <p class="mt-3 text-sm text-surface-variant">Texto informativo adaptado ao funcionamento atual do site; não substitui orientação jurídica.</p>
+            </div>
+        </div>
     </section>
 </div>
 <div id="community-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="community-title" aria-describedby="community-summary">
@@ -1014,6 +1071,61 @@
         if (!focusableElements.length) {
             event.preventDefault();
             termsPanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    });
+
+    const privacyTrigger = document.getElementById('privacy-trigger');
+    const privacyDialog = document.getElementById('privacy-dialog');
+    const privacyPanel = privacyDialog?.querySelector('.terms-dialog-panel');
+    const privacyCloseControls = privacyDialog?.querySelectorAll('[data-privacy-close], #privacy-close');
+    let lastPrivacyFocusedElement;
+
+    const getPrivacyFocusableElements = () => privacyDialog ? Array.from(
+        privacyDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closePrivacyDialog = () => {
+        if (!privacyDialog) return;
+        privacyDialog.classList.add('hidden');
+        privacyDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lastPrivacyFocusedElement?.focus();
+    };
+
+    const openPrivacyDialog = () => {
+        if (!privacyDialog) return;
+        lastPrivacyFocusedElement = document.activeElement;
+        privacyDialog.classList.remove('hidden');
+        privacyDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('privacy-close')?.focus();
+    };
+
+    privacyTrigger?.addEventListener('click', openPrivacyDialog);
+    privacyCloseControls?.forEach((control) => control.addEventListener('click', closePrivacyDialog));
+    privacyDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closePrivacyDialog();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getPrivacyFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            privacyPanel?.focus();
             return;
         }
 
