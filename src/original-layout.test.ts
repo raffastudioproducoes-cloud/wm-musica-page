@@ -7,6 +7,12 @@ import { describe, expect, it } from 'vitest'
 const original = readFileSync('LandPageWilmaPrototipo/code.html', 'utf8')
 
 describe('original language toggle', () => {
+  it('keeps the decorative hero waves non-interactive and disables them for reduced motion', () => {
+    expect(original).toContain('hero-wave-background absolute inset-0 h-full w-full pointer-events-none')
+    expect(original).toContain('.hero-wave-background animate')
+    expect(original).toContain('@media (prefers-reduced-motion: reduce)')
+  })
+
   it('switches the original layout to English and restores Portuguese', () => {
     const dom = new JSDOM(original, {
       runScripts: 'dangerously',
