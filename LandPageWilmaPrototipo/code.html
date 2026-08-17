@@ -185,6 +185,18 @@
         visibility: visible;
         transform: translate(-50%, 0);
         }
+
+        .terms-dialog-panel {
+            background: rgba(255, 248, 246, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 197, 169, 0.72);
+            box-shadow: 0 24px 80px rgba(58, 38, 0, 0.22);
+        }
+
+        .terms-dialog-panel:focus {
+            outline: none;
+        }
     </style>
 </head>
 <body class="font-body-md text-body-md antialiased pauta-bg">
@@ -589,10 +601,49 @@
             </p>
 <div class="flex space-x-6">
 <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300 text-xs uppercase" href="#">Privacidade</a>
-<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300 text-xs uppercase" href="#">Termos de Uso</a>
+<button id="terms-trigger" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300 text-xs uppercase focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="button" aria-haspopup="dialog" aria-controls="terms-dialog">Termos de Uso</button>
 </div>
 </div>
 </footer>
+<div id="terms-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="terms-title" aria-describedby="terms-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-terms-close aria-label="Fechar termos de uso"></button>
+    <section class="terms-dialog-panel relative flex max-h-[calc(100dvh-2rem)] w-full max-w-2xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-outline-variant/50 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-primary uppercase tracking-[0.2em]">Wilma Machado</p>
+                <h2 id="terms-title" class="font-headline-md text-headline-md mt-2 text-on-surface">Termos de Uso</h2>
+            </div>
+            <button id="terms-close" class="-mr-2 -mt-2 rounded-full p-2 text-on-surface-variant transition-colors duration-300 hover:bg-primary/10 hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" type="button" aria-label="Fechar termos de uso">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
+            <p id="terms-summary" class="font-body-md text-body-md text-on-surface-variant">Este aviso apresenta as condições de uso deste site institucional e as informações de privacidade aplicáveis à sua versão atual.</p>
+            <div class="mt-7 space-y-6 font-body-md text-body-md text-on-surface-variant">
+                <section>
+                    <h3 class="font-title-md text-title-md text-on-surface">Uso do site</h3>
+                    <p class="mt-2">O conteúdo é disponibilizado para consulta sobre o trabalho de Wilma Machado. Links para plataformas e redes de terceiros seguem os termos e as políticas de privacidade dessas próprias plataformas.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-on-surface">Dados pessoais</h3>
+                    <p class="mt-2">Nesta versão, o site não oferece cadastro, login ou formulário para envio de mensagens. Se uma funcionalidade que trate dados pessoais for adicionada, este aviso deverá informar, antes da coleta, o responsável pelo tratamento, as finalidades, a base legal, os compartilhamentos, a retenção e o canal de atendimento.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-on-surface">Direitos do titular</h3>
+                    <p class="mt-2">Nos termos da Lei Geral de Proteção de Dados Pessoais, o titular pode solicitar confirmação de tratamento, acesso, correção, informações sobre compartilhamento, eliminação nas hipóteses cabíveis e revogação do consentimento quando aplicável.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-on-surface">Contato e atualizações</h3>
+                    <p class="mt-2">Para dúvidas sobre este aviso, use o e-mail <a class="text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-on-primary-container" href="mailto:contato@wilmamachado.com">contato@wilmamachado.com</a>. Este conteúdo poderá ser atualizado se as funcionalidades ou o tratamento de dados do site mudarem.</p>
+                </section>
+            </div>
+            <div class="mt-8 border-t border-outline-variant/40 pt-5">
+                <a class="font-label-md text-label-md text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-on-primary-container focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">Consultar a Lei nº 13.709/2018 (LGPD)</a>
+                <p class="mt-3 text-sm text-on-surface-variant">Texto informativo; não substitui orientação jurídica.</p>
+            </div>
+        </div>
+    </section>
+</div>
 <script>
         const translation = {
             en: {
@@ -640,6 +691,61 @@
           button.setAttribute('aria-expanded', 'false');
         }
       });
+    });
+
+    const termsTrigger = document.getElementById('terms-trigger');
+    const termsDialog = document.getElementById('terms-dialog');
+    const termsPanel = termsDialog?.querySelector('.terms-dialog-panel');
+    const termsCloseControls = termsDialog?.querySelectorAll('[data-terms-close], #terms-close');
+    let lastFocusedElement;
+
+    const getTermsFocusableElements = () => termsDialog ? Array.from(
+        termsDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closeTermsDialog = () => {
+        if (!termsDialog) return;
+        termsDialog.classList.add('hidden');
+        termsDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lastFocusedElement?.focus();
+    };
+
+    const openTermsDialog = () => {
+        if (!termsDialog) return;
+        lastFocusedElement = document.activeElement;
+        termsDialog.classList.remove('hidden');
+        termsDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('terms-close')?.focus();
+    };
+
+    termsTrigger?.addEventListener('click', openTermsDialog);
+    termsCloseControls?.forEach((control) => control.addEventListener('click', closeTermsDialog));
+    termsDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeTermsDialog();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getTermsFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            termsPanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
     });
 
         // Simple scroll spy for navbar shadow

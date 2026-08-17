@@ -38,4 +38,30 @@ describe('original language toggle', () => {
     expect(button.textContent).toBe('PT/EN')
     expect(button.getAttribute('aria-pressed')).toBe('false')
   })
+
+  it('opens and closes the LGPD terms dialog without losing the trigger focus', () => {
+    const dom = new JSDOM(original, {
+      runScripts: 'dangerously',
+      beforeParse(window: Window) {
+        ;(window as typeof window & { tailwind: Record<string, unknown> }).tailwind = {}
+      },
+    })
+    const { document } = dom.window
+    const trigger = document.getElementById('terms-trigger') as HTMLButtonElement
+    const dialog = document.getElementById('terms-dialog') as HTMLDivElement
+    const close = document.getElementById('terms-close') as HTMLButtonElement
+
+    expect(trigger.getAttribute('aria-controls')).toBe('terms-dialog')
+    expect(dialog.getAttribute('role')).toBe('dialog')
+    expect(dialog.classList.contains('hidden')).toBe(true)
+
+    trigger.focus()
+    trigger.click()
+    expect(dialog.classList.contains('hidden')).toBe(false)
+    expect(document.activeElement).toBe(close)
+
+    close.click()
+    expect(dialog.classList.contains('hidden')).toBe(true)
+    expect(document.activeElement).toBe(trigger)
+  })
 })
