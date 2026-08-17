@@ -1,0 +1,15 @@
+{
+  "name": "wm-musica-page",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "typecheck": "tsc -b --pretty false",
+    "test": "vitest run"
+  },
+  "dependencies": {"@vitejs/plugin-react":"latest","vite":"latest","react":"latest","react-dom":"latest"},
+  "devDependencies": {"@eslint/js":"latest","@testing-library/jest-dom":"latest","@testing-library/react":"latest","@types/react":"latest","@types/react-dom":"latest","eslint":"latest","typescript":"latest","vitest":"latest","jsdom":"latest"}
+}
