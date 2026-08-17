@@ -6,37 +6,17 @@ import { describe, expect, it } from 'vitest'
 
 const original = readFileSync('LandPageWilmaPrototipo/code.html', 'utf8')
 
-describe('original language toggle', () => {
+describe('original layout behavior', () => {
   it('keeps the decorative hero waves non-interactive and disables them for reduced motion', () => {
     expect(original).toContain('hero-wave-background absolute inset-0 h-full w-full pointer-events-none')
     expect(original).toContain('.hero-wave-background animate')
     expect(original).toContain('@media (prefers-reduced-motion: reduce)')
   })
 
-  it('switches the original layout to English and restores Portuguese', () => {
-    const dom = new JSDOM(original, {
-      runScripts: 'dangerously',
-      beforeParse(window: Window) {
-        ;(window as typeof window & { tailwind: Record<string, unknown> }).tailwind = {}
-      },
-    })
-    const { document } = dom.window
-    const button = document.getElementById('language-toggle') as HTMLButtonElement
-
-    expect(button).not.toBeNull()
-    expect(button.getAttribute('aria-label')).toBe('Switch to English')
-
-    button.click()
-    expect(document.documentElement.lang).toBe('en')
-    expect(document.querySelector('a[href="#inicio"]')?.textContent).toContain('Home')
-    expect(button.textContent).toBe('EN/PT')
-    expect(button.getAttribute('aria-pressed')).toBe('true')
-
-    button.click()
-    expect(document.documentElement.lang).toBe('pt-BR')
-    expect(document.querySelector('a[href="#inicio"]')?.textContent).toContain('Início')
-    expect(button.textContent).toBe('PT/EN')
-    expect(button.getAttribute('aria-pressed')).toBe('false')
+  it('keeps Portuguese as the only page locale', () => {
+    expect(original).toContain('<html lang="pt-BR">')
+    expect(original).not.toContain('id="language-toggle"')
+    expect(original).not.toContain('const translation =')
   })
 
   it('opens and closes the LGPD terms dialog without losing the trigger focus', () => {

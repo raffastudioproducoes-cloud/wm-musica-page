@@ -215,7 +215,6 @@
 <a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md uppercase dark:hover:text-primary-fixed-dim" href="#contato">Contato</a>
 </div>
 <div class="hidden md:flex items-center space-x-4">
-<button aria-label="Switch to English" aria-pressed="false" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" id="language-toggle" type="button">PT/EN</button>
 <a
   href="https://open.spotify.com/intl-pt/artist/5wdfUMM2vrrgT3xBacWOgY?si=UZC0IeVeRf6sOOVbBVT3nA"
   target="_blank"
@@ -645,37 +644,6 @@
     </section>
 </div>
 <script>
-        const translation = {
-            en: {
-                'Início': 'Home', 'Trajetória': 'Journey', 'Músicas': 'Music', 'Obras': 'Works', 'Vídeos': 'Videos', 'Contato': 'Contact',
-                'Ouça agora': 'Listen now', 'Cantora • Compositora • Escritora Cristã': 'Singer • Composer • Christian Writer',
-                'Música, palavra e fé transformadas em obra. Um legado de arte e espiritualidade que atravessa gerações.': 'Music, word and faith transformed into work. A legacy of art and spirituality across generations.',
-                'Ouça Wilma Machado': 'Listen to Wilma Machado', 'Conheça sua trajetória': 'Discover her journey',
-                'Um chamado em forma de arte': 'A calling expressed through art', 'Discografia Destaque': 'Featured discography',
-                'Obras & Projetos': 'Works & Projects', 'Músicas Inéditas': 'Unreleased songs', 'Apresentações': 'Presentations',
-                'Navegação': 'Navigation', 'Redes Sociais': 'Social media', 'Privacidade': 'Privacy', 'Termos de Uso': 'Terms of use'
-            }
-        };
-        const languageToggle = document.getElementById('language-toggle');
-        languageToggle.addEventListener('click', () => {
-            const nextLocale = document.documentElement.lang === 'pt-BR' ? 'en' : 'pt-BR';
-            const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-            const nodes = [];
-            while (walker.nextNode()) nodes.push(walker.currentNode);
-  nodes.forEach((node) => {
-    const element = node.parentElement;
-    if (!element) return;
-    const original = element.dataset.pt || node.nodeValue.trim();
-    if (!original) return;
-    if (!element.dataset.pt) element.dataset.pt = original;
-    node.nodeValue = nextLocale === 'en' && translation.en[original] ? node.nodeValue.replace(original, translation.en[original]) : node.nodeValue.replace(node.nodeValue.trim(), element.dataset.pt);
-  });
-            document.documentElement.lang = nextLocale;
-            languageToggle.textContent = nextLocale === 'en' ? 'EN/PT' : 'PT/EN';
-            languageToggle.setAttribute('aria-pressed', String(nextLocale === 'en'));
-        languageToggle.setAttribute('aria-label', nextLocale === 'en' ? 'Mudar para português' : 'Switch to English');
-    });
-
     document.querySelectorAll('[data-coming-soon]').forEach((container) => {
       const button = container.querySelector('button');
 
