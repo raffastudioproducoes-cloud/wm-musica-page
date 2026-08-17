@@ -178,6 +178,13 @@
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(212, 197, 169, 0.3);
         }
+        .coming-soon:hover .coming-soon-tooltip,
+        .coming-soon:focus-within .coming-soon-tooltip,
+        .coming-soon.is-open .coming-soon-tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 0);
+        }
     </style>
 </head>
 <body class="font-body-md text-body-md antialiased pauta-bg">
@@ -304,45 +311,92 @@
 </div>
 <div class="md:col-span-6 md:col-start-7 space-y-8 mt-10 md:mt-0">
 <div>
-<h3 class="font-display-lg text-headline-lg text-on-surface mb-2">Pelas ruas do Rio</h3>
+<h3 class="font-display-lg text-headline-lg text-on-surface mb-2">Pelas Ruas do Rio...</h3>
 <p class="font-body-lg text-body-lg text-on-surface-variant">Um álbum que captura a essência da cidade maravilhosa através de uma perspectiva espiritual e poética.</p>
 </div>
 <div class="space-y-4">
 <div class="flex justify-between items-center py-3 border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-300 px-2 rounded cursor-pointer">
 <div class="flex items-center space-x-4">
 <span class="text-primary font-label-md text-label-md">01</span>
-<span class="font-body-md text-body-md text-on-surface">Alvorada no Arpoador</span>
+<span class="font-body-md text-body-md text-on-surface">Eu Te Amo. Eu Te Adoro, Meu Senhor!</span>
 </div>
-<span class="text-on-surface-variant font-body-md text-sm">4:12</span>
+<span class="text-on-surface-variant font-body-md text-sm">2:52</span>
 </div>
 <div class="flex justify-between items-center py-3 border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-300 px-2 rounded cursor-pointer">
 <div class="flex items-center space-x-4">
 <span class="text-primary font-label-md text-label-md">02</span>
-<span class="font-body-md text-body-md text-on-surface">Caminhos da Lapa</span>
+<span class="font-body-md text-body-md text-on-surface">Tende Bom Ânimo</span>
 </div>
-<span class="text-on-surface-variant font-body-md text-sm">3:45</span>
+<span class="text-on-surface-variant font-body-md text-sm">4:15</span>
 </div>
 <div class="flex justify-between items-center py-3 border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-300 px-2 rounded cursor-pointer">
 <div class="flex items-center space-x-4">
 <span class="text-primary font-label-md text-label-md">03</span>
-<span class="font-body-md text-body-md text-on-surface">Graça na Guanabara</span>
+<span class="font-body-md text-body-md text-on-surface">Pelas Ruas do Rio...</span>
 </div>
-<span class="text-on-surface-variant font-body-md text-sm">5:01</span>
+<span class="text-on-surface-variant font-body-md text-sm">3:52</span>
 </div>
 </div>
 <div class="pt-6 flex flex-wrap gap-4">
-<button class="flex items-center space-x-2 bg-surface-container px-6 py-3 rounded-full hover:bg-surface-container-high transition-all duration-300 border border-outline-variant/30 hover:-translate-y-0.5">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_circle</span>
-<span class="font-label-md text-label-md">Spotify</span>
-</button>
-<button class="flex items-center space-x-2 bg-surface-container px-6 py-3 rounded-full hover:bg-surface-container-high transition-all duration-300 border border-outline-variant/30 hover:-translate-y-0.5">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">smart_display</span>
-<span class="font-label-md text-label-md">YouTube</span>
-</button>
-<button class="flex items-center space-x-2 bg-surface-container px-6 py-3 rounded-full hover:bg-surface-container-high transition-all duration-300 border border-outline-variant/30 hover:-translate-y-0.5">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">music_note</span>
-<span class="font-label-md text-label-md">Apple Music</span>
-</button>
+<a
+  href="https://open.spotify.com/intl-pt/artist/5wdfUMM2vrrgT3xBacWOgY?si=UZC0IeVeRf6sOOVbBVT3nA"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Ouvir Wilma Machado no Spotify"
+  class="inline-flex items-center space-x-2 bg-surface-container px-6 py-3 rounded-full hover:bg-surface-container-high transition-all duration-300 border border-outline-variant/30 hover:-translate-y-0.5"
+>
+  <span
+    class="material-symbols-outlined"
+    style="font-variation-settings: 'FILL' 1;"
+    aria-hidden="true"
+  >
+    play_circle
+  </span>
+  <span class="font-label-md text-label-md">Spotify</span>
+</a>
+<a
+  href="https://www.youtube.com/@wilmamachado1233"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Abrir canal de Wilma Machado no YouTube"
+  class="inline-flex items-center space-x-2 bg-surface-container px-6 py-3 rounded-full hover:bg-surface-container-high transition-all duration-300 border border-outline-variant/30 hover:-translate-y-0.5"
+>
+  <span
+    class="material-symbols-outlined"
+    style="font-variation-settings: 'FILL' 1;"
+    aria-hidden="true"
+  >
+    smart_display
+  </span>
+  <span class="font-label-md text-label-md">YouTube</span>
+</a>
+<div class="coming-soon relative inline-flex group" data-coming-soon>
+  <button
+    id="apple-music-button"
+    type="button"
+    aria-expanded="false"
+    aria-describedby="apple-music-message"
+    class="flex items-center space-x-2 bg-surface-container px-6 py-3 rounded-full hover:bg-surface-container-high transition-all duration-300 border border-outline-variant/30 hover:-translate-y-0.5"
+  >
+    <span
+      class="material-symbols-outlined"
+      style="font-variation-settings: 'FILL' 1;"
+      aria-hidden="true"
+    >
+      music_note
+    </span>
+
+    <span class="font-label-md text-label-md">Apple Music</span>
+  </button>
+
+  <span
+    id="apple-music-message"
+    role="tooltip"
+    class="coming-soon-tooltip pointer-events-none absolute left-1/2 top-full z-20 mt-3 -translate-x-1/2 whitespace-nowrap rounded bg-inverse-surface px-4 py-2 font-label-md text-label-md uppercase tracking-widest text-inverse-on-surface opacity-0 invisible translate-y-1 transition-all duration-200"
+  >
+    Em breve!
+  </span>
+</div>
 </div>
 </div>
 </div>
@@ -568,8 +622,26 @@
             document.documentElement.lang = nextLocale;
             languageToggle.textContent = nextLocale === 'en' ? 'EN/PT' : 'PT/EN';
             languageToggle.setAttribute('aria-pressed', String(nextLocale === 'en'));
-            languageToggle.setAttribute('aria-label', nextLocale === 'en' ? 'Mudar para português' : 'Switch to English');
-        });
+        languageToggle.setAttribute('aria-label', nextLocale === 'en' ? 'Mudar para português' : 'Switch to English');
+    });
+
+    document.querySelectorAll('[data-coming-soon]').forEach((container) => {
+      const button = container.querySelector('button');
+
+      button.addEventListener('click', () => {
+        const isOpen = container.classList.toggle('is-open');
+
+        button.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      button.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          container.classList.remove('is-open');
+          button.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
         // Simple scroll spy for navbar shadow
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
