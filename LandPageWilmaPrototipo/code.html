@@ -104,7 +104,7 @@
             scroll-behavior: smooth;
         }
         body {
-            background-color: #fff8f6; /* surface */
+            background-color: #f1e5d4; /* areia mineral */
             color: #1e1b1a; /* on-surface */
             overflow-x: hidden;
         }
@@ -134,12 +134,23 @@
             .delay-700 { animation-delay: 0.7s; }
             .delay-900 { animation-delay: 0.9s; }
             .delay-1100 { animation-delay: 1.1s; }
+            .pauta-bg { animation: page-background-waves 32s ease-in-out infinite alternate; }
+
+            @keyframes page-background-waves {
+                0% { background-position: 0 0, 0 160px, 0 0, 0 0; }
+                50% { background-position: 28px 34px, -22px 198px, 0 0, 0 0; }
+                100% { background-position: -18px 12px, 24px 174px, 0 0, 0 0; }
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
             .reveal-item, .reveal-image {
                 opacity: 1;
                 transform: none;
+                animation: none;
+            }
+
+            .pauta-bg {
                 animation: none;
             }
 
@@ -158,10 +169,20 @@
         }
         
         .pauta-bg {
+            background-color: #f1e5d4;
             background-image: 
-                linear-gradient(to right, transparent 99%, rgba(181, 138, 60, 0.05) 100%),
-                linear-gradient(to bottom, transparent 99%, rgba(181, 138, 60, 0.05) 100%);
-            background-size: 20px 20px;
+                radial-gradient(ellipse 72% 28% at 50% -6%, transparent 68%, rgba(181, 138, 60, 0.11) 68.5%, transparent 69.2%),
+                radial-gradient(ellipse 78% 32% at 50% 106%, transparent 68%, rgba(181, 138, 60, 0.07) 68.4%, transparent 69.1%),
+                linear-gradient(to right, transparent 99%, rgba(181, 138, 60, 0.035) 100%),
+                linear-gradient(to bottom, transparent 99%, rgba(181, 138, 60, 0.035) 100%);
+            background-size: 920px 360px, 1180px 460px, 20px 20px, 20px 20px;
+            background-position: 0 0, 0 160px, 0 0, 0 0;
+        }
+
+        @media (max-width: 639px) {
+            .pauta-bg {
+                background-size: 620px 280px, 760px 360px, 20px 20px, 20px 20px;
+            }
         }
 
         .hover-zoom:hover img {
