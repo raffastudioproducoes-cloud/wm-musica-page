@@ -1,2 +1,2 @@
 import js from '@eslint/js'
-export default [js.configs.recommended, { ignores: ['dist/**', 'node_modules/**', 'LandPageWilmaPrototipo/**'] }]
+export default [js.configs.recommended, { ignores: ['dist/**', 'node_modules/**', 'LandPageWilmaPrototipo/**', 'public/**'] }]

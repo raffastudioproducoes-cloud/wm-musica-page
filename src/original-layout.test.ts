@@ -4,7 +4,7 @@ import { readFileSync } from 'node:fs'
 import { JSDOM } from 'jsdom'
 import { describe, expect, it } from 'vitest'
 
-const original = readFileSync('LandPageWilmaPrototipo/code.html', 'utf8')
+const original = readFileSync('public/code.html', 'utf8')
 
 describe('original layout behavior', () => {
   it('keeps the decorative hero waves non-interactive and disables them for reduced motion', () => {

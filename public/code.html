@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wilma Machado - Cantora • Compositora • Escritora Cristã</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fff8f6",
+                        "primary-fixed": "#ffdeaa",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#e8e1df",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#1e4877",
+                        "surface-bright": "#fff8f6",
+                        "on-surface": "#1e1b1a",
+                        "outline": "#817566",
+                        "surface-container-high": "#eee7e5",
+                        "inverse-primary": "#f0bf6b",
+                        "outline-variant": "#d2c4b3",
+                        "tertiary-container": "#6e93c7",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#33302f",
+                        "secondary": "#685d46",
+                        "surface-tint": "#7c580a",
+                        "on-tertiary-fixed": "#001c39",
+                        "surface-container": "#f4ecea",
+                        "on-primary-container": "#3a2600",
+                        "on-secondary-container": "#6d614a",
+                        "primary-fixed-dim": "#f0bf6b",
+                        "surface-container-low": "#f9f2f0",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "primary": "#7c580a",
+                        "tertiary": "#3a6091",
+                        "tertiary-fixed": "#d4e3ff",
+                        "on-tertiary-container": "#002b52",
+                        "on-surface-variant": "#4f4538",
+                        "secondary-fixed": "#f1e1c4",
+                        "on-background": "#1e1b1a",
+                        "surface-dim": "#dfd9d7",
+                        "on-primary-fixed": "#271900",
+                        "background": "#fff8f6",
+                        "on-secondary-fixed-variant": "#504630",
+                        "inverse-on-surface": "#f6efed",
+                        "on-secondary-fixed": "#221b09",
+                        "surface-container-highest": "#e8e1df",
+                        "tertiary-fixed-dim": "#a4c9ff",
+                        "secondary-fixed-dim": "#d4c5a9",
+                        "primary-container": "#b58a3c",
+                        "on-primary-fixed-variant": "#5f4100",
+                        "secondary-container": "#eedec1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "container-max": "1280px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bodoni Moda", "serif"],
+                        "display-lg": ["Bodoni Moda", "serif"],
+                        "headline-lg": ["Bodoni Moda", "serif"],
+                        "body-lg": ["Hanken Grotesk", "sans-serif"],
+                        "body-md": ["Hanken Grotesk", "sans-serif"],
+                        "label-md": ["Hanken Grotesk", "sans-serif"],
+                        "display-lg-mobile": ["Bodoni Moda", "serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "500" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.08em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            background-color: #f1e5d4; /* areia mineral */
+            color: #1e1b1a; /* on-surface */
+            overflow-x: hidden;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal-item {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: reveal 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            }
+            .reveal-image {
+                opacity: 0;
+                animation: fadeIn 1.5s ease-out forwards;
+            }
+            @keyframes reveal {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            @keyframes fadeIn {
+                to { opacity: 1; }
+            }
+            .delay-100 { animation-delay: 0.1s; }
+            .delay-300 { animation-delay: 0.3s; }
+            .delay-500 { animation-delay: 0.5s; }
+            .delay-700 { animation-delay: 0.7s; }
+            .delay-900 { animation-delay: 0.9s; }
+            .delay-1100 { animation-delay: 1.1s; }
+            .pauta-bg { animation: page-background-waves 32s ease-in-out infinite alternate; }
+
+            @keyframes page-background-waves {
+                0% { background-position: 0 0, 0 160px, 0 0, 0 0; }
+                50% { background-position: 28px 34px, -22px 198px, 0 0, 0 0; }
+                100% { background-position: -18px 12px, 24px 174px, 0 0, 0 0; }
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal-item, .reveal-image {
+                opacity: 1;
+                transform: none;
+                animation: none;
+            }
+
+            .pauta-bg {
+                animation: none;
+            }
+
+            .hero-wave-background animate {
+                display: none;
+            }
+        }
+
+        .timeline-line {
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #b58a3c, transparent);
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .trajectory-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(181, 138, 60, 0.55) transparent;
+        }
+
+        .trajectory-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .trajectory-scroll::-webkit-scrollbar-thumb {
+            background: rgba(181, 138, 60, 0.55);
+            border-radius: 999px;
+        }
+
+        .trajectory-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        .pauta-bg {
+            background-color: #f1e5d4;
+            background-image: 
+                radial-gradient(ellipse 72% 28% at 50% -6%, transparent 68%, rgba(181, 138, 60, 0.11) 68.5%, transparent 69.2%),
+                radial-gradient(ellipse 78% 32% at 50% 106%, transparent 68%, rgba(181, 138, 60, 0.07) 68.4%, transparent 69.1%),
+                linear-gradient(to right, transparent 99%, rgba(181, 138, 60, 0.035) 100%),
+                linear-gradient(to bottom, transparent 99%, rgba(181, 138, 60, 0.035) 100%);
+            background-size: 920px 360px, 1180px 460px, 20px 20px, 20px 20px;
+            background-position: 0 0, 0 160px, 0 0, 0 0;
+        }
+
+        @media (max-width: 639px) {
+            .pauta-bg {
+                background-size: 620px 280px, 760px 360px, 20px 20px, 20px 20px;
+            }
+        }
+
+        .hover-zoom:hover img {
+            transform: scale(1.05);
+            transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .hover-zoom img {
+            transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .glass-panel {
+            background: rgba(255, 248, 246, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 197, 169, 0.3);
+        }
+        .coming-soon:hover .coming-soon-tooltip,
+        .coming-soon:focus-within .coming-soon-tooltip,
+        .coming-soon.is-open .coming-soon-tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, 0);
+        }
+
+        .terms-dialog-panel {
+            background: rgba(255, 248, 246, 0.88);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 197, 169, 0.72);
+            box-shadow: 0 24px 80px rgba(58, 38, 0, 0.22);
+        }
+
+        .terms-dialog-panel:focus {
+            outline: none;
+        }
+
+        #terms-dialog > [data-terms-close],
+        #literature-dialog > [data-literature-close],
+        #dedinho-dialog > [data-dedinho-close],
+        #community-dialog > [data-community-close],
+        #privacy-dialog > [data-privacy-close],
+        #catalog-dialog > [data-catalog-close] {
+            background: rgba(30, 27, 26, 0.62);
+        }
+
+        #terms-dialog .terms-dialog-panel,
+        #literature-dialog .terms-dialog-panel,
+        #dedinho-dialog .terms-dialog-panel,
+        #community-dialog .terms-dialog-panel,
+        #privacy-dialog .terms-dialog-panel,
+        #catalog-dialog .terms-dialog-panel {
+            color: #f6efed;
+            background:
+                radial-gradient(circle at -4% -10%, rgba(240, 191, 107, 0.28) 0, rgba(240, 191, 107, 0.09) 25%, transparent 48%),
+                rgba(51, 48, 47, 0.68);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 4px solid rgba(240, 191, 107, 0.92);
+            border-right: 3px solid rgba(240, 191, 107, 0.58);
+            border-bottom: 1px solid rgba(240, 191, 107, 0.36);
+            border-left: 2px solid rgba(240, 191, 107, 0.48);
+            box-shadow: 0 28px 84px rgba(30, 27, 26, 0.5), -16px -16px 48px rgba(240, 191, 107, 0.08);
+        }
+
+        .editorial-graphite-card {
+            color: #f6efed;
+            background:
+                radial-gradient(circle at -4% -10%, rgba(240, 191, 107, 0.28) 0, rgba(240, 191, 107, 0.09) 25%, transparent 48%),
+                rgba(51, 48, 47, 0.68) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 4px solid rgba(240, 191, 107, 0.92) !important;
+            border-right: 3px solid rgba(240, 191, 107, 0.58) !important;
+            border-bottom: 1px solid rgba(240, 191, 107, 0.36) !important;
+            border-left: 2px solid rgba(240, 191, 107, 0.48) !important;
+            box-shadow: 0 28px 84px rgba(30, 27, 26, 0.5), -16px -16px 48px rgba(240, 191, 107, 0.08);
+        }
+
+        .editorial-graphite-card .text-on-surface {
+            color: #f6efed;
+        }
+
+        .editorial-graphite-card .text-on-surface-variant {
+            color: #e8e1df;
+        }
+
+        .editorial-graphite-card .text-primary {
+            color: #f0bf6b;
+        }
+
+        .editorial-graphite-card input.text-on-surface,
+        .editorial-graphite-card textarea.text-on-surface {
+            color: #1e1b1a;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased pauta-bg">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface/80 backdrop-blur-md text-primary dark:text-primary-fixed border-b border-outline-variant/30 sticky top-0 z-50 transition-transform duration-300 w-full" id="navbar">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md text-primary dark:text-primary-fixed tracking-tight hover:opacity-80 transition-opacity">
+                Wilma Machado
+            </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-primary font-bold border-b border-primary pb-1 font-label-md text-label-md uppercase hover:text-primary-container dark:hover:text-primary-fixed-dim transition-all opacity-80 scale-95" href="#inicio">Início</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md uppercase dark:hover:text-primary-fixed-dim" href="#trajetoria">Trajetória</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md uppercase dark:hover:text-primary-fixed-dim" href="#musicas">Músicas</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md uppercase dark:hover:text-primary-fixed-dim" href="#obras">Obras</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md uppercase dark:hover:text-primary-fixed-dim" href="https://www.youtube.com/@wilmamachado1233" target="_blank" rel="noopener noreferrer">Vídeos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors duration-300 font-label-md text-label-md uppercase dark:hover:text-primary-fixed-dim" href="#contato">Contato</a>
+</div>
+<div class="hidden md:flex items-center space-x-4">
+<a
+  href="https://open.spotify.com/intl-pt/artist/5wdfUMM2vrrgT3xBacWOgY?si=UZC0IeVeRf6sOOVbBVT3nA"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="inline-flex items-center justify-center bg-primary-container text-on-primary px-6 py-3 rounded hover:bg-primary transition-colors font-label-md text-label-md uppercase tracking-widest shadow-[0_4px_20px_rgba(181,138,60,0.15)] hover:shadow-[0_8px_30px_rgba(181,138,60,0.25)] hover:-translate-y-0.5 duration-300"
+  aria-label="Ouvir Wilma Machado no Spotify"
+>
+  Ouça agora
+</a>
+</div>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary transition-transform hover:scale-110">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="inicio">
+<!-- Decorative background: non-interactive and intentionally behind the complete hero. -->
+<div aria-hidden="true" class="hero-wave-background absolute inset-0 h-full w-full pointer-events-none text-primary opacity-10" id="animated-svg-ANIMATION_46">
+<svg fill="none" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 50 Q 30 40, 50 50 T 90 50" stroke="currentColor" stroke-linecap="round" stroke-width="0.5">
+<animate attributename="d" dur="5s" repeatcount="indefinite" values="M10 50 Q 30 40, 50 50 T 90 50;
+                     M10 50 Q 30 60, 50 50 T 90 50;
+                     M10 50 Q 30 40, 50 50 T 90 50"></animate>
+</path>
+<path d="M10 55 Q 30 45, 50 55 T 90 55" stroke="currentColor" stroke-linecap="round" stroke-opacity="0.5" stroke-width="0.3">
+<animate attributename="d" dur="7s" repeatcount="indefinite" values="M10 55 Q 30 45, 50 55 T 90 55;
+                     M10 55 Q 30 65, 50 55 T 90 55;
+                     M10 55 Q 30 45, 50 55 T 90 55"></animate>
+</path>
+</svg>
+</div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-gutter w-full items-center">
+<!-- Text Content -->
+<div class="md:col-span-6 z-10 space-y-8 order-2 md:order-1 mt-12 md:mt-0 relative">
+<div class="flex items-center space-x-4 reveal-item delay-300">
+<span class="h-px w-12 bg-primary"></span>
+<p class="font-label-md text-label-md text-primary uppercase tracking-widest">Cantora • Compositora • Escritora Cristã</p>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">
+<span class="inline-block reveal-item delay-500">Wilma</span> <br/>
+<span class="inline-block text-primary italic reveal-item delay-700">Machado</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md reveal-item delay-900">
+                    Música, palavra e fé transformadas em obra. Um legado de arte e espiritualidade que atravessa gerações.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-8 reveal-item delay-1100">
+<a
+  href="https://open.spotify.com/intl-pt/artist/5wdfUMM2vrrgT3xBacWOgY?si=UZC0IeVeRf6sOOVbBVT3nA"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="inline-flex items-center justify-center bg-primary-container text-on-primary px-8 py-4 rounded hover:bg-primary transition-all duration-300 font-label-md text-label-md uppercase tracking-widest text-center shadow-[0_4px_20px_rgba(181,138,60,0.1)] hover:shadow-[0_8px_30px_rgba(181,138,60,0.2)] hover:-translate-y-1"
+  aria-label="Ouvir Wilma Machado no Spotify"
+>
+  Ouça Wilma Machado
+</a>
+<a class="border border-primary text-primary px-8 py-4 rounded hover:bg-surface-container transition-all duration-300 font-label-md text-label-md uppercase tracking-widest text-center hover:-translate-y-1" href="#trajetoria">
+  Conheça sua trajetória
+</a>
+</div>
+</div>
+<!-- Hero Image -->
+<div class="md:col-span-6 relative order-1 md:order-2 h-[512px] md:h-[819px] w-full reveal-image delay-100">
+<div class="absolute inset-0 bg-surface-container-high rounded-xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+<img alt="Wilma Machado trabalhando" class="w-full h-full object-cover object-center" src="wilma-trabalhando-set-2015.jpg"/>
+<!-- Decorative Element -->
+<div class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-surface to-transparent"></div>
+</div>
+<!-- Floating Element -->
+<div class="absolute -bottom-10 -left-10 glass-panel editorial-graphite-card p-6 rounded-lg hidden md:block max-w-xs reveal-item delay-1100 hover:-translate-y-2 transition-transform duration-500">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: 'FILL' 1;">music_note</span>
+<p class="font-headline-md text-body-lg italic text-on-surface">"Cantando as belezas e verdades da vida."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Manifesto Section -->
+<section class="bg-surface-container py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+<div class="absolute top-0 right-0 opacity-5 w-64 h-64 text-primary">
+<span class="material-symbols-outlined text-[200px]">auto_awesome</span>
+</div>
+<div class="max-w-3xl mx-auto text-center space-y-8 relative z-10 hover-zoom">
+<span class="material-symbols-outlined text-primary text-4xl mb-4 transition-transform duration-500 hover:rotate-12" style="font-variation-settings: 'FILL' 0;">spa</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Um chamado em forma de arte</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                A arte verdadeira nasce de um encontro profundo com o divino. Cada nota, cada palavra escrita e cada melodia composta por Wilma Machado é um reflexo direto de sua jornada de fé. Um convite para pausar, refletir e encontrar serenidade em um mundo ruidoso.
+            </p>
+</div>
+</section>
+<!-- Listen Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="musicas">
+<div class="flex items-center space-x-4 mb-16">
+<span class="h-px w-12 bg-primary"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-widest text-sm">Discografia Destaque</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 relative group hover-zoom rounded-xl overflow-hidden">
+<img class="w-full aspect-square object-cover shadow-xl" data-alt="A beautifully crafted album cover titled 'Pelas ruas do Rio'. The artwork features a soft, impressionistic or fine-art photography style depiction of Rio de Janeiro's historical streets bathed in warm, golden-hour light. The aesthetic is extremely premium, minimalist, and serene, utilizing a color palette of ivory, warm beige, and soft charcoal. The typography on the cover, if visible, is an elegant serif font." src="pelas-ruas-do-rio-capa.png"/>
+<div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+<button aria-label="Tocar Pelas Ruas do Rio" aria-pressed="false" class="w-16 h-16 bg-surface rounded-full flex items-center justify-center text-primary shadow-lg transform scale-90 group-hover:scale-100 transition-all duration-300 hover:bg-primary-container hover:text-on-primary" id="pelas-ruas-audio-toggle" type="button">
+<span aria-hidden="true" class="material-symbols-outlined text-3xl" id="pelas-ruas-audio-icon" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<audio id="pelas-ruas-audio" preload="none">
+<source src="1- Pelas ruas do Rio -WM  voz (duração 03 52hs).mp3" type="audio/mpeg"/>
+</audio>
+<div class="md:col-span-6 md:col-start-7 space-y-8 mt-10 md:mt-0">
+<div>
+<h3 class="font-display-lg text-headline-lg text-on-surface mb-2">Pelas Ruas do Rio...</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Um álbum que captura a essência da cidade maravilhosa através de uma perspectiva espiritual e poética.</p>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center py-3 border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-300 px-2 rounded cursor-pointer">
+<div class="flex items-center space-x-4">
+<span class="text-primary font-label-md text-label-md">01</span>
+<span class="font-body-md text-body-md text-on-surface">Eu Te Amo. Eu Te Adoro, Meu Senhor!</span>
+</div>
+<span class="text-on-surface-variant font-body-md text-sm">2:52</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-300 px-2 rounded cursor-pointer">
+<div class="flex items-center space-x-4">
+<span class="text-primary font-label-md text-label-md">02</span>
+<span class="font-body-md text-body-md text-on-surface">Tende Bom Ânimo</span>
+</div>
+<span class="text-on-surface-variant font-body-md text-sm">4:15</span>
+</div>
+<div class="flex justify-between items-center py-3 border-b border-outline-variant/30 hover:bg-surface-container-low transition-colors duration-300 px-2 rounded cursor-pointer">
+<div class="flex items-center space-x-4">
+<span class="text-primary font-label-md text-label-md">03</span>
+<span class="font-body-md text-body-md text-on-surface">Pelas Ruas do Rio...</span>
+</div>
+<span class="text-on-surface-variant font-body-md text-sm">3:52</span>
+</div>
+</div>
+<div class="pt-6 flex flex-wrap gap-4">
+<a
+  href="https://open.spotify.com/intl-pt/artist/5wdfUMM2vrrgT3xBacWOgY?si=UZC0IeVeRf6sOOVbBVT3nA"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Ouvir Wilma Machado no Spotify"
+  class="inline-flex items-center space-x-2 bg-surface-container px-6 py-3 rounded-full hover:bg-surface-container-high transition-all duration-300 border border-outline-variant/30 hover:-translate-y-0.5"
+>
+  <span
+    class="material-symbols-outlined"
+    style="font-variation-settings: 'FILL' 1;"
+    aria-hidden="true"
+  >
+    play_circle
+  </span>
+  <span class="font-label-md text-label-md">Spotify</span>
+</a>
+<a
+  href="https://www.youtube.com/@wilmamachado1233"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Abrir canal de Wilma Machado no YouTube"
+  class="inline-flex items-center space-x-2 bg-surface-container px-6 py-3 rounded-full hover:bg-surface-container-high transition-all duration-300 border border-outline-variant/30 hover:-translate-y-0.5"
+>
+  <span
+    class="material-symbols-outlined"
+    style="font-variation-settings: 'FILL' 1;"
+    aria-hidden="true"
+  >
+    smart_display
+  </span>
+  <span class="font-label-md text-label-md">YouTube</span>
+</a>
+<div class="coming-soon relative inline-flex group" data-coming-soon>
+  <button
+    id="apple-music-button"
+    type="button"
+    aria-expanded="false"
+    aria-describedby="apple-music-message"
+    class="flex items-center space-x-2 bg-surface-container px-6 py-3 rounded-full hover:bg-surface-container-high transition-all duration-300 border border-outline-variant/30 hover:-translate-y-0.5"
+  >
+    <span
+      class="material-symbols-outlined"
+      style="font-variation-settings: 'FILL' 1;"
+      aria-hidden="true"
+    >
+      music_note
+    </span>
+
+    <span class="font-label-md text-label-md">Apple Music</span>
+  </button>
+
+  <span
+    id="apple-music-message"
+    role="tooltip"
+    class="coming-soon-tooltip pointer-events-none absolute left-1/2 top-full z-20 mt-3 -translate-x-1/2 whitespace-nowrap rounded bg-inverse-surface px-4 py-2 font-label-md text-label-md uppercase tracking-widest text-inverse-on-surface opacity-0 invisible translate-y-1 transition-all duration-200"
+  >
+    Em breve!
+  </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trajectory Section -->
+<section class="bg-surface-container-low py-section-gap px-margin-mobile md:px-margin-desktop" id="trajetoria">
+<div class="max-w-container-max mx-auto">
+<div class="flex items-center space-x-4 mb-16 justify-center">
+<span class="h-px w-12 bg-primary"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-widest text-sm">Trajetória</h2>
+<span class="h-px w-12 bg-primary"></span>
+</div>
+<div class="trajectory-scroll-frame relative max-w-4xl mx-auto">
+<div id="trajectory-scroll" class="trajectory-scroll relative h-[36rem] overflow-y-auto pr-2 sm:h-[40rem] md:h-[42rem] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" tabindex="0" role="region" aria-label="Cronologia da trajetória de Wilma Machado. Use a rolagem para consultar os marcos.">
+<div class="relative py-10">
+<div class="timeline-line hidden md:block"></div>
+<div class="space-y-24">
+<!-- Event 1 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full group cursor-default">
+<div class="md:w-5/12 text-center md:text-right mb-6 md:mb-0 transition-transform duration-500 group-hover:-translate-x-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">1963</h3>
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface mt-2">Origem</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Nascimento em Duque de Caxias, no Rio de Janeiro, onde se iniciam suas referências de vida, fé e formação.</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary rounded-full z-10 transition-transform duration-500 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="md:w-5/12"></div>
+</div>
+<!-- Event 2 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full group cursor-default">
+<div class="md:w-5/12 hidden md:block"></div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary rounded-full z-10 transition-transform duration-500 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="md:w-5/12 text-center md:text-left mt-6 md:mt-0 transition-transform duration-500 group-hover:translate-x-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">1974</h3>
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface mt-2">Primeiros Contatos com a Literatura</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Inicia sua trajetória de trabalho e tem contato diário com jornais e diferentes publicações, ampliando seu interesse pela leitura.</p>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full group cursor-default">
+<div class="md:w-5/12 text-center md:text-right mb-6 md:mb-0 transition-transform duration-500 group-hover:-translate-x-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">1980</h3>
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface mt-2">Reconhecimento pela Escrita</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Recebe destaque escolar por uma redação e conquista uma bolsa de estudos voltada à formação de novos escritores.</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary rounded-full z-10 transition-transform duration-500 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="md:w-5/12"></div>
+</div>
+<!-- Event 4 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full group cursor-default">
+<div class="md:w-5/12 hidden md:block"></div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary rounded-full z-10 transition-transform duration-500 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="md:w-5/12 text-center md:text-left mt-6 md:mt-0 transition-transform duration-500 group-hover:translate-x-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">1982</h3>
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface mt-2">Formação e Leitura</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Conclui o ensino fundamental e aprofunda seu vínculo com a leitura, estudando autores brasileiros e universais.</p>
+</div>
+</div>
+<!-- Event 5 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full group cursor-default">
+<div class="md:w-5/12 text-center md:text-right mb-6 md:mb-0 transition-transform duration-500 group-hover:-translate-x-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">2000</h3>
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface mt-2">Nova Fase de Fé e Estudos</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Retoma os estudos e inicia uma nova etapa de participação na vida cristã, que passa a inspirar sua produção artística.</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary rounded-full z-10 transition-transform duration-500 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="md:w-5/12"></div>
+</div>
+<!-- Event 6 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full group cursor-default">
+<div class="md:w-5/12 hidden md:block"></div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary rounded-full z-10 transition-transform duration-500 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="md:w-5/12 text-center md:text-left mt-6 md:mt-0 transition-transform duration-500 group-hover:translate-x-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">2004</h3>
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface mt-2">Início da Produção Autoral</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Passa a desenvolver mensagens, poemas, canções, histórias e projetos de evangelização por meio da palavra e da música.</p>
+</div>
+</div>
+<!-- Event 7 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full group cursor-default">
+<div class="md:w-5/12 text-center md:text-right mb-6 md:mb-0 transition-transform duration-500 group-hover:-translate-x-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">2007</h3>
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface mt-2">Caminhada Espiritual Reafirmada</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Marca uma etapa importante de reafirmação de sua fé e de dedicação à escrita, à composição e ao serviço cristão.</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary rounded-full z-10 transition-transform duration-500 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="md:w-5/12"></div>
+</div>
+<!-- Event 8 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full group cursor-default">
+<div class="md:w-5/12 hidden md:block"></div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary rounded-full z-10 transition-transform duration-500 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="md:w-5/12 text-center md:text-left mt-6 md:mt-0 transition-transform duration-500 group-hover:translate-x-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">2011 — 2018</h3>
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface mt-2">Um por Todos! Todos por Um</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Cria, escreve e coordena o projeto missionário e social voltado ao apoio espiritual e material de famílias da comunidade.</p>
+</div>
+</div>
+<!-- Event 9 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full group cursor-default">
+<div class="md:w-5/12 text-center md:text-right mb-6 md:mb-0 transition-transform duration-500 group-hover:-translate-x-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">2013 e 2015</h3>
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface mt-2">Pelas Ruas do Rio</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Realiza apresentações do musical “Pelas Ruas do Rio”, reunindo música, mensagem e participação coletiva.</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary rounded-full z-10 transition-transform duration-500 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="md:w-5/12"></div>
+</div>
+<!-- Event 10 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full group cursor-default">
+<div class="md:w-5/12 hidden md:block"></div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary rounded-full z-10 transition-transform duration-500 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="md:w-5/12 text-center md:text-left mt-6 md:mt-0 transition-transform duration-500 group-hover:translate-x-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">2019</h3>
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface mt-2">WMCIA — Produção Musical e Literária</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Formaliza sua atuação artística por meio da WMCIA, dedicada à divulgação de obras musicais, literárias e projetos autorais.</p>
+</div>
+</div>
+<!-- Event 11 -->
+<div class="relative flex flex-col md:flex-row items-center justify-between w-full group cursor-default">
+<div class="md:w-5/12 text-center md:text-right mb-6 md:mb-0 transition-transform duration-500 group-hover:-translate-x-2">
+<h3 class="font-headline-lg text-headline-lg text-primary">Atualidade</h3>
+<h4 class="font-body-lg text-body-lg font-bold text-on-surface mt-2">Obras a Serviço da Palavra</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Segue desenvolvendo e apresentando sua produção de escrita, música, formação e comunicação cristã ao público.</p>
+</div>
+<div class="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-surface border-2 border-primary rounded-full z-10 transition-transform duration-500 group-hover:scale-150 group-hover:bg-primary"></div>
+<div class="md:w-5/12"></div>
+</div>
+</div>
+ </div>
+</div>
+<div class="pointer-events-none absolute inset-x-0 top-0 z-20 h-12 bg-gradient-to-b from-surface-container-low via-surface-container-low/75 to-transparent" aria-hidden="true"></div>
+<div class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-12 bg-gradient-to-t from-surface-container-low via-surface-container-low/75 to-transparent" aria-hidden="true"></div>
+</div>
+</div>
+</section>
+<!-- Projects Grid -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="obras">
+<div class="flex items-center space-x-4 mb-16">
+<span class="h-px w-12 bg-primary"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-widest text-sm">Obras &amp; Projetos</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-[0_10px_40px_rgba(181,138,60,0.08)] transition-all duration-500 hover:-translate-y-2">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An editorial, high-quality photograph representing a cozy, intimate acoustic music session. The image features a vintage microphone and a beautifully crafted acoustic guitar resting in a warmly lit room with ivory and beige tones. Soft, diffused sunlight streams through a window, creating a serene, inviting atmosphere. The composition is clean, leaving negative space, perfectly aligning with a premium minimalist aesthetic." src="IMG_20230128_211331_196.jpg"/>
+</div>
+<div class="p-8">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest text-xs mb-3 block">Projeto Musical</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 text-2xl group-hover:text-primary transition-colors duration-300">Um Dedinho de Prosa</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                        Um espetáculo intimista onde a música se entrelaça com histórias do cotidiano e reflexões profundas.
+                    </p>
+<button id="dedinho-trigger" class="text-secondary font-label-md text-label-md flex items-center group-hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="button" aria-haspopup="dialog" aria-controls="dedinho-dialog">
+                        Saiba mais <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-[0_10px_40px_rgba(181,138,60,0.08)] transition-all duration-500 hover:-translate-y-2">
+<div class="h-64 overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover object-[center_35%] group-hover:scale-105 transition-transform duration-700 opacity-90 mix-blend-multiply" data-alt="A sophisticated still life image of an open book with elegant, classic typography, resting on a clean, light-colored wooden or marble table. Beside the book is a simple, beautiful ceramic cup of tea or coffee, softly steaming. The lighting is bright, natural, and gentle, evoking a quiet morning of reflection. The color palette consists of soft whites, ivories, and subtle warm neutral tones, fitting a serene editorial design." src="Wilma rua G, 18-03-2019 (7).jpg"/>
+</div>
+<div class="p-8">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest text-xs mb-3 block">Literatura</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 text-2xl group-hover:text-primary transition-colors duration-300">Obras Literárias</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                        A produção de Wilma Machado reúne literatura cristã, poesia, contos, relatos pessoais, reflexões, dramaturgia e materiais de formação musical.
+                    </p>
+<button id="literature-trigger" class="text-secondary font-label-md text-label-md flex items-center group-hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="button" aria-haspopup="dialog" aria-controls="literature-dialog">
+                        Ver Mais<span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-hidden hover:shadow-[0_10px_40px_rgba(181,138,60,0.08)] transition-all duration-500 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+<div class="h-64 overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A striking, artistic photograph showing a group of diverse hands reaching together into the center, symbolizing unity, community, and collaboration. The lighting is soft and ethereal, casting gentle shadows. The tones are muted, focusing on skin textures, warm beiges, and soft whites. The image feels deeply human, emotional, and elegantly composed, suitable for a high-end cultural or philanthropic project presentation." src="Mapa rua Araquém13-01-2017.jpg"/>
+</div>
+<div class="p-8">
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest text-xs mb-3 block">Ação Comunitária</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 text-2xl group-hover:text-primary transition-colors duration-300">Um por todos! Todos por um</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">
+                        O Projeto “Um por Todos! Todos por Um” é uma iniciativa cristã de evangelização associada à ação social. Sua proposta central é reunir igrejas, voluntários, famílias e comunidades em uma rede organizada de cuidado, solidariedade e anúncio do Evangelho.
+                    </p>
+<button id="community-trigger" class="text-secondary font-label-md text-label-md flex items-center group-hover:text-primary transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="button" aria-haspopup="dialog" aria-controls="community-dialog">
+                        Conheça a iniciativa <span class="material-symbols-outlined ml-2 text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- B2B Section (CTAs) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-inverse-surface text-inverse-on-surface relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pauta-bg invert"></div>
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 relative z-10">
+<!-- Inéditas -->
+<div class="group editorial-graphite-card border border-outline-variant/20 p-10 lg:p-16 rounded-2xl hover:bg-white/5 transition-all duration-500 hover:border-inverse-primary/50">
+<span class="material-symbols-outlined text-inverse-primary text-4xl mb-6 transition-transform duration-500 group-hover:scale-110" style="font-variation-settings: 'FILL' 0;">lyrics</span>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-white">Músicas Inéditas</h3>
+<p class="font-body-lg text-body-lg text-surface-variant mb-8 opacity-90">
+                    Composições exclusivas aguardando vozes e produtores. Um catálogo rico em poesia e profundidade espiritual para o seu próximo projeto.
+                </p>
+<button id="catalog-trigger" class="bg-inverse-primary text-on-primary-container px-8 py-4 rounded hover:bg-primary-fixed-dim transition-all duration-300 font-label-md text-label-md uppercase tracking-widest w-full sm:w-auto hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(240,191,107,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" type="button" aria-haspopup="dialog" aria-controls="catalog-dialog">
+                    Acessar Catálogo
+                </button>
+</div>
+<!-- Apresentações -->
+<div class="group editorial-graphite-card border border-outline-variant/20 p-10 lg:p-16 rounded-2xl hover:bg-white/5 transition-all duration-500 hover:border-inverse-primary/50">
+<span class="material-symbols-outlined text-inverse-primary text-4xl mb-6 transition-transform duration-500 group-hover:scale-110" style="font-variation-settings: 'FILL' 0;">church</span>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-white">Apresentações</h3>
+<p class="font-body-lg text-body-lg text-surface-variant mb-8 opacity-90">
+                    Leve a arte e a mensagem de Wilma Machado para sua igreja, evento ou conferência. Momentos de louvor, reflexão e beleza acústica.
+                </p>
+<button id="appointment-trigger" class="border border-inverse-primary text-inverse-primary px-8 py-4 rounded hover:bg-white/10 transition-all duration-300 font-label-md text-label-md uppercase tracking-widest w-full sm:w-auto hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" type="button" aria-haspopup="dialog" aria-controls="appointment-dialog">
+                    Solicitar Agenda
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-lowest text-secondary dark:text-secondary-fixed-dim full-width py-section-gap border-t border-outline-variant/20" id="contato">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<div class="font-display-lg text-headline-md text-primary mb-6 hover:opacity-80 transition-opacity cursor-pointer">
+                    Wilma Machado
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    Música, palavra e fé transformadas em obra.
+                </p>
+</div>
+<div class="md:col-span-2 grid grid-cols-2 gap-8">
+<div>
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-on-surface mb-6">Navegação</h4>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#inicio">Início</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#trajetoria">Trajetória</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="#obras">Obras e Projetos</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-on-surface mb-6">Contato</h4>
+<ul class="space-y-4 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="https://wa.me/5521970152448?text=Olá%21%20Conheci%20a%20landing%20page%20da%20Wilma%20Machado%20e%20gostaria%20de%20conversar%20com%20a%20assessoria%20sobre%20uma%20possível%20reunião%20ou%20agendamento." target="_blank" rel="noopener noreferrer">Assessoria</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-300" href="mailto:wmciaproducaomusical@gmail.com">Contato WMCIA</a></li>
+</ul>
+</div>
+</div>
+<div class="md:col-span-1 flex flex-col justify-between">
+<div>
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-on-surface mb-6">Redes Sociais</h4>
+<div class="flex space-x-4">
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 p-2 bg-surface rounded-full border border-outline-variant/30 hover:border-primary hover:-translate-y-1" href="#">
+<span class="material-symbols-outlined text-xl">photo_camera</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-all duration-300 p-2 bg-surface rounded-full border border-outline-variant/30 hover:border-primary hover:-translate-y-1" href="https://www.youtube.com/@wilmamachado1233" target="_blank" rel="noopener noreferrer" aria-label="Abrir canal de Wilma Machado no YouTube">
+<span class="material-symbols-outlined text-xl" aria-hidden="true">smart_display</span>
+</a>
+<a
+  class="text-on-surface-variant hover:text-primary transition-all duration-300 p-2 bg-surface rounded-full border border-outline-variant/30 hover:border-primary hover:-translate-y-1"
+  href="https://open.spotify.com/intl-pt/artist/5wdfUMM2vrrgT3xBacWOgY?si=UZC0IeVeRf6sOOVbBVT3nA"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Ouvir Wilma Machado no Spotify"
+>
+  <span class="material-symbols-outlined text-xl" aria-hidden="true">music_note</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-24 pt-8 border-t border-outline-variant/20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                © 2024 Wilma Machado. Todos os direitos reservados. WMCIA.
+            </p>
+<div class="flex space-x-6">
+<button id="privacy-trigger" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300 text-xs uppercase focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="button" aria-haspopup="dialog" aria-controls="privacy-dialog">Privacidade</button>
+<button id="terms-trigger" class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-300 text-xs uppercase focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="button" aria-haspopup="dialog" aria-controls="terms-dialog">Termos de Uso</button>
+</div>
+</div>
+<div class="mt-6 flex justify-center px-margin-mobile md:px-margin-desktop">
+    <div class="flex items-center gap-3 opacity-100">
+        <img class="h-5 w-auto" src="Ativo 12artes.png" alt="Raffa Studio" />
+        <p class="font-label-md text-[10px] uppercase tracking-[0.16em] text-on-surface-variant">® Raffa Studio · desde 2020</p>
+    </div>
+</div>
+</footer>
+<div id="appointment-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="appointment-title" aria-describedby="appointment-summary">
+    <div class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" data-appointment-close aria-hidden="true"></div>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-2xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-outline-variant/50 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-primary uppercase tracking-[0.2em]">Wilma Machado</p>
+                <h2 id="appointment-title" class="font-headline-md text-headline-md mt-2 text-on-surface">Solicitação de Agendamento</h2>
+            </div>
+            <button id="appointment-close" class="-mr-2 -mt-2 rounded-full p-2 text-on-surface-variant transition-colors duration-300 hover:bg-primary/10 hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" type="button" aria-label="Fechar solicitação de agendamento">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <form id="appointment-form" class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8" novalidate>
+            <p id="appointment-summary" class="font-body-md text-body-md text-on-surface-variant">Preencha os dados abaixo. Ao enviar, serão abertos seu e-mail e o WhatsApp da assessoria com a solicitação pronta para revisão e envio.</p>
+            <div id="appointment-error-summary" class="mt-5 hidden rounded-lg border border-error/30 bg-error-container px-4 py-3 text-on-error-container" role="alert" tabindex="-1" aria-labelledby="appointment-error-title">
+                <p id="appointment-error-title" class="font-label-md text-label-md">Verifique os campos indicados antes de continuar.</p>
+            </div>
+            <div class="mt-7 grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <div class="sm:col-span-2">
+                    <label class="font-label-md text-label-md text-on-surface" for="appointment-name">Nome</label>
+                    <input id="appointment-name" name="name" class="mt-2 w-full rounded border border-outline-variant bg-surface px-4 py-3 text-on-surface transition-colors placeholder:text-on-surface-variant/70 focus:border-primary focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary" type="text" autocomplete="name" required aria-describedby="appointment-name-error" />
+                    <p id="appointment-name-error" class="mt-2 hidden text-sm text-error"></p>
+                </div>
+                <div>
+                    <label class="font-label-md text-label-md text-on-surface" for="appointment-contact">Contato / organização</label>
+                    <input id="appointment-contact" name="contact" class="mt-2 w-full rounded border border-outline-variant bg-surface px-4 py-3 text-on-surface transition-colors placeholder:text-on-surface-variant/70 focus:border-primary focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary" type="text" autocomplete="organization" required aria-describedby="appointment-contact-error" />
+                    <p id="appointment-contact-error" class="mt-2 hidden text-sm text-error"></p>
+                </div>
+                <div>
+                    <label class="font-label-md text-label-md text-on-surface" for="appointment-email">E-mail</label>
+                    <input id="appointment-email" name="email" class="mt-2 w-full rounded border border-outline-variant bg-surface px-4 py-3 text-on-surface transition-colors placeholder:text-on-surface-variant/70 focus:border-primary focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary" type="email" autocomplete="email" required aria-describedby="appointment-email-error" />
+                    <p id="appointment-email-error" class="mt-2 hidden text-sm text-error"></p>
+                </div>
+                <div class="sm:col-span-2">
+                    <label class="font-label-md text-label-md text-on-surface" for="appointment-phone">Celular</label>
+                    <input id="appointment-phone" name="phone" class="mt-2 w-full rounded border border-outline-variant bg-surface px-4 py-3 text-on-surface transition-colors placeholder:text-on-surface-variant/70 focus:border-primary focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="appointment-phone-error" />
+                    <p id="appointment-phone-error" class="mt-2 hidden text-sm text-error"></p>
+                </div>
+                <div class="sm:col-span-2">
+                    <label class="font-label-md text-label-md text-on-surface" for="appointment-message">Descrição ou pedido</label>
+                    <textarea id="appointment-message" name="message" class="mt-2 min-h-32 w-full resize-y rounded border border-outline-variant bg-surface px-4 py-3 text-on-surface transition-colors placeholder:text-on-surface-variant/70 focus:border-primary focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary" required aria-describedby="appointment-message-error"></textarea>
+                    <p id="appointment-message-error" class="mt-2 hidden text-sm text-error"></p>
+                </div>
+            </div>
+            <div class="mt-8 flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <p class="text-sm text-on-surface-variant">O envio final é confirmado por você nos aplicativos abertos.</p>
+                <button class="bg-primary-container px-6 py-3 text-on-primary-container rounded transition-all duration-300 hover:bg-primary hover:text-on-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" type="submit">Enviar solicitação</button>
+            </div>
+        </form>
+    </section>
+</div>
+<div id="privacy-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="privacy-title" aria-describedby="privacy-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-privacy-close aria-label="Fechar aviso de privacidade"></button>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-inverse-primary/30 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-inverse-primary uppercase tracking-[0.2em]">Wilma Machado</p>
+                <h2 id="privacy-title" class="font-headline-md text-headline-md mt-2 text-inverse-on-surface">Aviso de Privacidade</h2>
+            </div>
+            <button id="privacy-close" class="-mr-2 -mt-2 rounded-full p-2 text-surface-variant transition-colors duration-300 hover:bg-white/10 hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-primary" type="button" aria-label="Fechar aviso de privacidade">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
+            <p id="privacy-summary" class="font-body-md text-body-md text-surface-variant">Este aviso explica como esta versão do site trata dados pessoais, em conformidade com os princípios de transparência, finalidade, necessidade e segurança previstos na Lei Geral de Proteção de Dados Pessoais — LGPD.</p>
+            <div class="mt-7 space-y-6 font-body-md text-body-md text-surface-variant">
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Escopo deste site</h3>
+                    <p class="mt-2">O site apresenta o trabalho de Wilma Machado e da WMCIA. Os painéis de obras, projetos e conteúdos institucionais apenas exibem informações na tela: eles não solicitam dados pessoais, não criam conta e não enviam dados por conta própria.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Dados informados no agendamento</h3>
+                    <p class="mt-2">Se você optar por preencher o formulário de solicitação de agendamento, os campos solicitam nome, contato ou organização, e-mail, celular e uma breve descrição do pedido. Esses dados são usados para estruturar sua solicitação de contato e agendamento.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Como o envio funciona</h3>
+                    <p class="mt-2">Nesta versão, o formulário não envia dados diretamente para um banco de dados ou servidor do site. Após a validação no seu navegador, ele prepara uma mensagem para seu aplicativo de e-mail e uma cópia para o WhatsApp da assessoria. O envio final só ocorre se você confirmar a ação nos respectivos aplicativos.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Finalidade e compartilhamento</h3>
+                    <p class="mt-2">Os dados enviados voluntariamente devem ser utilizados para responder ao pedido, organizar a agenda e manter a comunicação relacionada à solicitação. Ao usar links para e-mail, WhatsApp, Spotify, YouTube ou outras plataformas externas, você passa a interagir também com esses serviços, que possuem políticas próprias de privacidade. O site não declara compartilhar dados do formulário automaticamente com terceiros além dos aplicativos que você escolher abrir para concluir o envio.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Dados técnicos e conteúdo externo</h3>
+                    <p class="mt-2">Serviços de hospedagem, navegadores e plataformas externas podem tratar dados técnicos necessários ao seu funcionamento, como endereço IP, data, horário e informações do dispositivo, conforme suas próprias políticas. Antes de usar uma plataforma externa, consulte as condições e o aviso de privacidade dela.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Seus direitos</h3>
+                    <p class="mt-2">Nos termos da LGPD, o titular pode solicitar confirmação de tratamento, acesso, correção de dados incompletos ou desatualizados, informações sobre compartilhamento, anonimização, bloqueio ou eliminação nas hipóteses legais, portabilidade quando aplicável, revogação do consentimento e oposição a tratamento irregular.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Contato para privacidade</h3>
+                    <p class="mt-2">Para dúvidas, pedidos relacionados a dados pessoais ou exercício de direitos, entre em contato pelo e-mail <a class="text-inverse-primary underline decoration-inverse-primary/40 underline-offset-4 transition-colors hover:text-inverse-on-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="mailto:wmciaproducaomusical@gmail.com">wmciaproducaomusical@gmail.com</a>. Ao responder, o responsável pelo atendimento poderá solicitar apenas as informações necessárias para confirmar a identidade e atender o pedido com segurança.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Atualizações</h3>
+                    <p class="mt-2">Este aviso deverá ser atualizado antes da implantação de novas formas de coleta, armazenamento, cookies não essenciais, análises de navegação, integrações, compartilhamentos ou uso de dados para finalidades diferentes das descritas aqui.</p>
+                </section>
+            </div>
+            <div class="mt-8 border-t border-inverse-primary/25 pt-5">
+                <a class="font-label-md text-label-md text-inverse-primary underline decoration-inverse-primary/40 underline-offset-4 transition-colors hover:text-inverse-on-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709compilado.htm" target="_blank" rel="noopener noreferrer">Consultar a Lei nº 13.709/2018 (LGPD)</a>
+                <p class="mt-3 text-sm text-surface-variant">Texto informativo adaptado ao funcionamento atual do site; não substitui orientação jurídica.</p>
+            </div>
+        </div>
+    </section>
+</div>
+<div id="community-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="community-title" aria-describedby="community-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-community-close aria-label="Fechar resumo do projeto Um por Todos Todos por Um"></button>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-inverse-primary/30 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-inverse-primary uppercase tracking-[0.2em]">Ação Comunitária</p>
+                <h2 id="community-title" class="font-headline-md text-headline-md mt-2 text-inverse-on-surface">Resumo do Projeto “Um por Todos! Todos por Um”</h2>
+            </div>
+            <button id="community-close" class="-mr-2 -mt-2 rounded-full p-2 text-surface-variant transition-colors duration-300 hover:bg-white/10 hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-primary" type="button" aria-label="Fechar resumo do projeto Um por Todos Todos por Um">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
+            <p id="community-summary" class="font-body-md text-body-md text-surface-variant">O Projeto <strong class="font-bold text-inverse-on-surface">“Um por Todos! Todos por Um”</strong> é uma iniciativa cristã de evangelização associada à ação social. Sua proposta central é reunir igrejas, voluntários, famílias e comunidades em uma rede organizada de cuidado, solidariedade e anúncio do Evangelho.</p>
+            <div class="mt-7 space-y-6 font-body-md text-body-md text-surface-variant">
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Uma rede de cuidado</h3>
+                    <p class="mt-2">De forma simples, o projeto parte da ideia de que uma pessoa, uma família ou uma instituição pode ajudar com aquilo que tem, e que a união de muitas pequenas contribuições pode gerar apoio real para quem enfrenta necessidades materiais, emocionais e espirituais.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Unidade e União</h3>
+                    <p class="mt-2">A principal característica do projeto é definida nos documentos como <strong class="font-bold text-inverse-on-surface">“Unidade e União”</strong>:</p>
+                    <ul class="mt-3 list-disc space-y-2 pl-5 marker:text-inverse-primary">
+                        <li><strong class="font-bold text-inverse-on-surface">Unidade</strong> entre igrejas cristãs, respeitando suas diferentes denominações e características;</li>
+                        <li><strong class="font-bold text-inverse-on-surface">União</strong> entre famílias, voluntários, líderes e moradores de uma mesma comunidade;</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Ação social e espiritual</strong> acontecendo juntas, com apoio prático e acompanhamento cristão.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Origem e desenvolvimento</h3>
+                    <p class="mt-2">O acervo indica que o projeto foi iniciado por <strong class="font-bold text-inverse-on-surface">Wilma Machado em março de 2011</strong>, no bairro de Jardim Bangu, no Rio de Janeiro. A ideia surgiu a partir da percepção de que uma família em situação de vulnerabilidade precisava de uma ajuda mais ampla e contínua do que uma única pessoa poderia oferecer. A proposta, então, foi mobilizar a comunidade e as igrejas locais para que cada família voluntária contribuísse com algum item, alimento, produto de higiene, serviço ou apoio possível.</p>
+                    <p class="mt-3">O projeto foi experimentado e desenvolvido ao longo de aproximadamente sete anos. Nesse período, foram criados documentos administrativos, registros de voluntários, relatórios, formulários de acolhimento, roteiros de visita, controles de doações, prestação de contas, materiais de formação e organização de campos missionários.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Formas de atendimento</h3>
+                    <p class="mt-2">A proposta não se limita à entrega de alimentos. O projeto prevê uma rede de atendimento que pode incluir:</p>
+                    <ul class="mt-3 list-disc space-y-2 pl-5 marker:text-inverse-primary">
+                        <li>Apoio alimentar para famílias em dificuldade;</li>
+                        <li>Visitas e acompanhamento de pessoas acolhidas;</li>
+                        <li>Encaminhamento e apoio a pessoas em situação de vulnerabilidade;</li>
+                        <li>Oração por enfermos e famílias;</li>
+                        <li>Cultos e encontros em casas;</li>
+                        <li>Discipulado e ensino bíblico;</li>
+                        <li>Registro de pedidos de oração;</li>
+                        <li>Participação de voluntários, igrejas e instituições parceiras;</li>
+                        <li>Organização de ofertas, recibos, inventário de bens e prestação de contas.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Participação das igrejas</h3>
+                    <p class="mt-2">Segundo os documentos, as igrejas podem participar como <strong class="font-bold text-inverse-on-surface">Igreja Sede</strong>, <strong class="font-bold text-inverse-on-surface">subSede</strong>, apoio distrital ou igrejas parceiras em um campo missionário. Cada função possui responsabilidades definidas, com orientações de planejamento, cadastro, atendimento, administração e acompanhamento das ações.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Segurança e transparência</h3>
+                    <p class="mt-2">O projeto também possui uma preocupação importante com segurança e transparência. Os materiais preveem identificação de voluntários, registros administrativos, documentação de participação, controle de doações e prestação de contas. A orientação é que as famílias atendidas possam verificar a identidade das pessoas que se apresentam em nome do projeto.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Formação e comunicação</h3>
+                    <p class="mt-2">Além da atuação prática nas comunidades, existe uma estrutura de formação e comunicação. O acervo reúne vídeos-palestras, roteiros, mapas de campo missionário, documentos de planejamento, materiais para site, documentos de inserção de igrejas e registros fotográficos e audiovisuais das ações. Há uma série planejada de doze vídeos-palestras para explicar a proposta, a organização e a aplicação do projeto.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Fé em ação</h3>
+                    <p class="mt-2">Em sua dimensão espiritual, o projeto se baseia na compreensão cristã de que fé e ação devem caminhar juntas. A proposta é anunciar o Evangelho ao mesmo tempo em que se procura atender necessidades concretas das pessoas, promovendo cuidado, esperança, acolhimento e fortalecimento da comunidade.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Síntese</h3>
+                    <p class="mt-2">O Projeto <strong class="font-bold text-inverse-on-surface">“Um por Todos! Todos por Um”</strong> é uma ferramenta missionária e social criada para transformar a solidariedade em uma rede organizada. Ele busca unir igrejas e comunidades para apoiar famílias em necessidade, fortalecer vínculos, promover valores cristãos e oferecer ajuda material e espiritual de forma contínua, planejada e responsável.</p>
+                </section>
+            </div>
+            <p class="mt-8 border-t border-inverse-primary/25 pt-5 text-sm text-surface-variant">O material analisado mostra uma estrutura ampla, composta por documentos de gestão, relatórios, registros de voluntários, controles administrativos, materiais de discipulado, roteiros de vídeos, imagens, registros de ações e conteúdos para divulgação digital. Os documentos também indicam a autoria e a coordenação de Wilma Machado durante o período experimental do projeto.</p>
+            <p class="mt-4 text-sm text-surface-variant">As informações deste resumo foram extraídas dos documentos internos do acervo. Referências a registros, datas, participação institucional, resultados e disponibilidade pública do projeto devem ser confirmadas diretamente nos documentos oficiais e nos canais institucionais correspondentes.</p>
+        </div>
+    </section>
+</div>
+<div id="dedinho-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="dedinho-title" aria-describedby="dedinho-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-dedinho-close aria-label="Fechar resumo do projeto Um Dedinho de Prosa"></button>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-inverse-primary/30 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-inverse-primary uppercase tracking-[0.2em]">Projeto Musical</p>
+                <h2 id="dedinho-title" class="font-headline-md text-headline-md mt-2 text-inverse-on-surface">Resumo do Projeto “Um Dedinho de Prosa”</h2>
+            </div>
+            <button id="dedinho-close" class="-mr-2 -mt-2 rounded-full p-2 text-surface-variant transition-colors duration-300 hover:bg-white/10 hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-primary" type="button" aria-label="Fechar resumo do projeto Um Dedinho de Prosa">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
+            <p id="dedinho-summary" class="font-body-md text-body-md text-surface-variant"><strong class="font-bold text-inverse-on-surface">Um Dedinho de Prosa com Wilma Machado</strong> é um quadro de vídeos criado para compartilhar reflexões sobre situações do cotidiano à luz das Escrituras. O projeto tem uma linguagem direta, pessoal e acolhedora, buscando conversar com o público sobre fé, família, escolhas, comportamento, relacionamentos, propósito de vida e experiências espirituais.</p>
+            <div class="mt-7 space-y-6 font-body-md text-body-md text-surface-variant">
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Proposta do quadro</h3>
+                    <p class="mt-2">A proposta apresentada nos próprios roteiros é fazer uma conversa leve e reflexiva, conduzida por Wilma Machado, com o objetivo de incentivar o público a pensar, fortalecer a fé e aplicar ensinamentos bíblicos na vida diária. Em vários episódios, a autora convida o espectador a “mastigar a Palavra”, isto é, refletir com calma sobre os textos bíblicos e suas mensagens.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Trajetória e continuidade</h3>
+                    <p class="mt-2">O acervo mostra que o projeto começou em <strong class="font-bold text-inverse-on-surface">maio de 2021</strong> e foi organizado em edições periódicas, inicialmente com proposta de publicação às quintas-feiras, às 22 horas. Há roteiros desde a 1ª edição, materiais de 2021 e 2022, um retorno documentado em fevereiro de 2024 e novos conteúdos em 2025. Os arquivos indicam, pelo menos, <strong class="font-bold text-inverse-on-surface">25 edições planejadas ou produzidas</strong> ao longo desse período.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Formato de cada edição</h3>
+                    <p class="mt-2">Cada edição segue uma estrutura parecida: música de abertura, saudação ao público, apresentação do tema, reflexão principal, referências bíblicas, momentos de testemunho ou experiência pessoal, convite para interação no canal e encerramento. Os roteiros também contêm indicações técnicas para gravação e edição, como cenário, entrada de música, legendas, imagens, cortes de vídeo e chamadas para inscrição, comentários, curtidas e compartilhamento.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Temas abordados</h3>
+                    <ul class="mt-3 list-disc space-y-2 pl-5 marker:text-inverse-primary">
+                        <li>A verdadeira felicidade;</li>
+                        <li>Relacionamentos e preparo emocional;</li>
+                        <li>Deus é detalhista?;</li>
+                        <li>Deus existe mesmo?;</li>
+                        <li>Fé, oração, escolhas e amadurecimento pessoal;</li>
+                        <li>Evangelização e missão cristã;</li>
+                        <li>Reflexões sobre acontecimentos sociais, familiares e cotidianos.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Uma produção completa</h3>
+                    <p class="mt-2">O material mostra que <strong class="font-bold text-inverse-on-surface">Um Dedinho de Prosa</strong> não é apenas uma série de falas para vídeo. Trata-se de uma produção completa, formada por textos, roteiros, músicas, vídeos brutos, vídeos editados, imagens, vinhetas, materiais de divulgação e orientações para publicação. O acervo possui dezenas de roteiros e uma grande quantidade de registros audiovisuais, demonstrando planejamento e continuidade do projeto.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">WMCIA e integração artística</h3>
+                    <p class="mt-2">A produção é ligada à <strong class="font-bold text-inverse-on-surface">WMCIA — Produção Musical e Literária</strong>, reunindo as diferentes áreas de atuação de Wilma Machado: escrita, música, canto, reflexão cristã e comunicação audiovisual. Algumas edições utilizam músicas de autoria de Wilma como introdução ou apoio à mensagem, reforçando a integração entre palavra e música.</p>
+                    <p class="mt-3">Também existe uma orientação de apresentação para o YouTube, com ficha técnica, informações de produção e proposta de temporada on-line. Isso indica que o projeto foi pensado para funcionar como um programa digital estruturado, com identidade própria e possibilidade de continuidade.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Síntese</h3>
+                    <p class="mt-2"><strong class="font-bold text-inverse-on-surface">Um Dedinho de Prosa com Wilma Machado</strong> é uma série de reflexões cristãs em vídeo que transforma temas do cotidiano em conversas sobre fé, comportamento, esperança e propósito. É um projeto autoral de comunicação e evangelização, construído com roteiros, música e produção audiovisual, voltado principalmente ao público que busca mensagens de inspiração e orientação espiritual.</p>
+                </section>
+            </div>
+            <p class="mt-8 border-t border-inverse-primary/25 pt-5 text-sm text-surface-variant">A leitura foi baseada nos roteiros e materiais existentes no acervo. Os dados sobre datas, quantidade de edições e formato do projeto foram identificados nos próprios arquivos; informações de publicação efetiva, audiência ou desempenho em plataformas devem ser confirmadas diretamente nos canais oficiais.</p>
+        </div>
+    </section>
+</div>
+<div id="literature-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="literature-title" aria-describedby="literature-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-literature-close aria-label="Fechar resumo da produção literária"></button>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-inverse-primary/30 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-inverse-primary uppercase tracking-[0.2em]">Obras Literárias</p>
+                <h2 id="literature-title" class="font-headline-md text-headline-md mt-2 text-inverse-on-surface">Resumo da Produção Literária de Wilma Machado</h2>
+            </div>
+            <button id="literature-close" class="-mr-2 -mt-2 rounded-full p-2 text-surface-variant transition-colors duration-300 hover:bg-white/10 hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-primary" type="button" aria-label="Fechar resumo da produção literária">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
+            <p id="literature-summary" class="font-body-md text-body-md text-surface-variant">A produção de Wilma Machado reúne literatura cristã, poesia, contos, relatos pessoais, reflexões, dramaturgia e materiais de formação musical. Sua escrita tem como eixo a fé, a evangelização, o cotidiano, a família, o propósito de vida e a transformação pessoal.</p>
+            <div class="mt-7 space-y-6 font-body-md text-body-md text-surface-variant">
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Principais obras literárias</h3>
+                    <p class="mt-2">Entre suas principais obras estão <strong class="font-bold text-inverse-on-surface">Trajetória de uma Escritora Cristã</strong>, livro autobiográfico sobre sua caminhada como autora e cristã; a <strong class="font-bold text-inverse-on-surface">Coletânea de Poemas — Tema: A Vida</strong>, que reúne textos sobre fé, esperança, dor, trabalho, criação e reflexão sobre a existência; e <strong class="font-bold text-inverse-on-surface">Contos de Wilma Machado — Conversas de Ponto de Ônibus</strong>, com narrativas curtas inspiradas em situações cotidianas, relações humanas e mensagens de caráter ético e espiritual.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Narrativas e reflexões</h3>
+                    <p class="mt-2">Outras obras importantes são <strong class="font-bold text-inverse-on-surface">O Mapa do Tesouro</strong>, uma dinâmica missionária voltada a crianças e adolescentes; <strong class="font-bold text-inverse-on-surface">Efeitos em Cadeia</strong>, com reflexões sobre atitudes, relações e consequências do cotidiano; e <strong class="font-bold text-inverse-on-surface">Cotidiano de uma Família</strong>, narrativa memorialística que retrata cenas da vida doméstica, lembranças e experiências pessoais.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Fé e testemunho</h3>
+                    <p class="mt-2">A autora também desenvolveu textos de inspiração e testemunho religioso, como <strong class="font-bold text-inverse-on-surface">Destravando a Mente</strong>, sobre propósito e transformação pessoal; <strong class="font-bold text-inverse-on-surface">Ao Pé da Letra</strong>, obra de reflexão cristã; <strong class="font-bold text-inverse-on-surface">Minhas Experiências com o Espírito Santo</strong>, relato de vivências espirituais; e <strong class="font-bold text-inverse-on-surface">O Silêncio de Deus</strong>, poema acompanhado de uma experiência pessoal sobre perdão, dor, fé e interioridade.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Teatro e relatos</h3>
+                    <p class="mt-2">Sua produção inclui ainda a peça teatral cantada <strong class="font-bold text-inverse-on-surface">A Volta de Jesus</strong>, obra dramática e musical voltada à evangelização, além de relatos como <strong class="font-bold text-inverse-on-surface">Sonhos — Igrejas Protestantes: Atenção</strong> e <strong class="font-bold text-inverse-on-surface">Sonhei com Bangu — RJ</strong>, apresentados pela autora como testemunhos de fé.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Formação musical</h3>
+                    <p class="mt-2">Além da literatura, Wilma Machado possui uma produção didático-musical relevante. Destacam-se <strong class="font-bold text-inverse-on-surface">Musicalizando entre Amigos — Teoria e Prática: Do Teclado ao Piano</strong>, <strong class="font-bold text-inverse-on-surface">Vocalises entre Amigos — Série 1</strong>, <strong class="font-bold text-inverse-on-surface">Vocalizando entre Amigos — Série 2</strong> e o <strong class="font-bold text-inverse-on-surface">Caderno de Exercícios — Vocalises entre Amigos</strong>. Esses materiais são voltados ao ensino de teclado, piano, canto, vocalização e formação de novos músicos.</p>
+                    <p class="mt-3">Também há a canção <strong class="font-bold text-inverse-on-surface">Deus é Maravilhoso</strong>, com letra e música atribuídas a Wilma Machado, reforçando a ligação entre sua escrita e sua produção musical.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Curadoria e colaborações</h3>
+                    <p class="mt-2">É importante diferenciar as obras autorais dos materiais de curadoria ou colaboração. O documento <strong class="font-bold text-inverse-on-surface">Pensamentos de Outros</strong>, por exemplo, reúne frases atribuídas a outros palestrantes e foi organizado por Wilma, mas não deve ser apresentado como uma obra integralmente autoral. Da mesma forma, alguns livros utilizam letras, imagens ou ilustrações de terceiros, devidamente creditados nos próprios documentos.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Síntese</h3>
+                    <p class="mt-2">Wilma Machado pode ser apresentada como <strong class="font-bold text-inverse-on-surface">escritora, poetisa, contista, dramaturga, autora de textos de reflexão cristã e criadora de materiais didáticos musicais</strong>. Sua obra reúne poesia, narrativas do cotidiano, relatos de fé, evangelização, teatro cantado e educação musical, formando uma trajetória artística marcada pela espiritualidade, pela palavra e pelo serviço ao próximo.</p>
+                </section>
+            </div>
+            <p class="mt-8 border-t border-inverse-primary/25 pt-5 text-sm text-surface-variant">A identificação de autoria foi baseada nos próprios documentos do acervo, como capas, assinaturas, metadados e expedientes editoriais. Informações sobre registros, publicação comercial ou direitos autorais devem ser confirmadas em documentos oficiais quando necessárias.</p>
+        </div>
+    </section>
+</div>
+<div id="catalog-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="catalog-title" aria-describedby="catalog-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-catalog-close aria-label="Fechar catálogo de músicas para licenciamento"></button>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-inverse-primary/30 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-inverse-primary uppercase tracking-[0.2em]">WMCIA</p>
+                <h2 id="catalog-title" class="font-headline-md text-headline-md mt-2 text-inverse-on-surface">Músicas para Licenciamento</h2>
+            </div>
+            <button id="catalog-close" class="-mr-2 -mt-2 rounded-full p-2 text-surface-variant transition-colors duration-300 hover:bg-white/10 hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-primary" type="button" aria-label="Fechar catálogo de músicas para licenciamento">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
+            <p id="catalog-summary" class="font-body-md text-body-md text-surface-variant">Há canções que nascem para encontrar uma voz — e este catálogo reúne composições de Wilma Machado preparadas para ganhar novos intérpretes, arranjos e caminhos.</p>
+            <p class="mt-4 font-body-md text-body-md text-surface-variant">São obras de inspiração cristã, com mensagens de fé, acolhimento, adoração e esperança. Cada título possui uma identidade própria e pode se transformar em um novo projeto musical por meio de concessão e licenciamento.</p>
+            <div class="mt-7 space-y-8 font-body-md text-body-md text-surface-variant">
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Para momentos de fé e entrega</h3>
+                    <ul class="mt-4 space-y-3" role="list">
+                        <li><strong class="font-bold text-inverse-on-surface">Somente o Teu Amor</strong> — uma canção sobre a força e a presença do amor de Deus.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Ainda É Tempo</strong> — um convite à renovação, à esperança e a novos começos.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Jesus Cristo É o Senhor</strong> — uma declaração direta de louvor e fé.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Perfeitos Adoradores</strong> — uma canção voltada à adoração e à vida de entrega.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Dá-me Seu Coração</strong> — uma mensagem de aproximação, transformação e comunhão.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Vem, Senhor!</strong> — uma oração em forma de música, marcada pela expectativa e devoção.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Para celebrar, acolher e inspirar</h3>
+                    <ul class="mt-4 space-y-3" role="list">
+                        <li><strong class="font-bold text-inverse-on-surface">Deixar Criança Ser Criança</strong> — uma obra com olhar sensível para a infância, a leveza e o cuidado.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Benção Especial</strong> — uma canção de afeto, gratidão e palavras que desejam bem.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Seja Bem-vindo Meu Irmão</strong> — uma música de acolhimento, comunhão e celebração da chegada.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Doce Alegria</strong> — uma composição luminosa, pensada para transmitir felicidade e esperança.</li>
+                    </ul>
+                </section>
+            </div>
+            <p class="mt-8 border-t border-inverse-primary/25 pt-5 font-body-md text-body-md text-surface-variant">Este é um catálogo aberto a novas interpretações. As composições estão disponíveis para artistas, músicos, produtores e ministérios que desejem desenvolver projetos com letras de profundidade espiritual e identidade cristã.</p>
+            <p class="mt-4 font-body-md text-body-md text-surface-variant">Para conhecer as condições de concessão e licenciamento, entre em contato com a WMCIA — Produção Musical e Literária.</p>
+        </div>
+    </section>
+</div>
+<div id="terms-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="terms-title" aria-describedby="terms-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-terms-close aria-label="Fechar termos de uso"></button>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-2xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-inverse-primary/30 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-inverse-primary uppercase tracking-[0.2em]">Wilma Machado</p>
+                <h2 id="terms-title" class="font-headline-md text-headline-md mt-2 text-inverse-on-surface">Termos de Uso</h2>
+            </div>
+            <button id="terms-close" class="-mr-2 -mt-2 rounded-full p-2 text-surface-variant transition-colors duration-300 hover:bg-white/10 hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-primary" type="button" aria-label="Fechar termos de uso">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
+            <p id="terms-summary" class="font-body-md text-body-md text-surface-variant">Este aviso apresenta as condições de uso deste site institucional e as informações de privacidade aplicáveis à sua versão atual.</p>
+            <div class="mt-7 space-y-6 font-body-md text-body-md text-surface-variant">
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Uso do site</h3>
+                    <p class="mt-2">O conteúdo é disponibilizado para consulta sobre o trabalho de Wilma Machado. Links para plataformas e redes de terceiros seguem os termos e as políticas de privacidade dessas próprias plataformas.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Dados pessoais</h3>
+                    <p class="mt-2">Nesta versão, o site disponibiliza um formulário de solicitação de agendamento. Ao escolher enviar, seus dados são organizados em uma mensagem para o seu aplicativo de e-mail e em uma cópia para o WhatsApp da assessoria; o envio final é confirmado por você nesses aplicativos. Caso novas formas de tratamento sejam adicionadas, este aviso deverá informar, antes da coleta, o responsável pelo tratamento, as finalidades, a base legal, os compartilhamentos, a retenção e o canal de atendimento.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Direitos do titular</h3>
+                    <p class="mt-2">Nos termos da Lei Geral de Proteção de Dados Pessoais, o titular pode solicitar confirmação de tratamento, acesso, correção, informações sobre compartilhamento, eliminação nas hipóteses cabíveis e revogação do consentimento quando aplicável.</p>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Contato e atualizações</h3>
+                    <p class="mt-2">Para dúvidas sobre este aviso, use o e-mail <a class="text-inverse-primary underline decoration-inverse-primary/40 underline-offset-4 transition-colors hover:text-inverse-on-surface" href="mailto:wmciaproducaomusical@gmail.com">wmciaproducaomusical@gmail.com</a>. Este conteúdo poderá ser atualizado se as funcionalidades ou o tratamento de dados do site mudarem.</p>
+                </section>
+            </div>
+            <div class="mt-8 border-t border-inverse-primary/25 pt-5">
+                <a class="font-label-md text-label-md text-inverse-primary underline decoration-inverse-primary/40 underline-offset-4 transition-colors hover:text-inverse-on-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="_blank" rel="noopener noreferrer">Consultar a Lei nº 13.709/2018 (LGPD)</a>
+                <p class="mt-3 text-sm text-surface-variant">Texto informativo; não substitui orientação jurídica.</p>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    document.querySelectorAll('[data-coming-soon]').forEach((container) => {
+      const button = container.querySelector('button');
+
+      button.addEventListener('click', () => {
+        const isOpen = container.classList.toggle('is-open');
+
+        button.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      button.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          container.classList.remove('is-open');
+          button.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    const termsTrigger = document.getElementById('terms-trigger');
+    const termsDialog = document.getElementById('terms-dialog');
+    const termsPanel = termsDialog?.querySelector('.terms-dialog-panel');
+    const termsCloseControls = termsDialog?.querySelectorAll('[data-terms-close], #terms-close');
+    let lastFocusedElement;
+
+    const getTermsFocusableElements = () => termsDialog ? Array.from(
+        termsDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closeTermsDialog = () => {
+        if (!termsDialog) return;
+        termsDialog.classList.add('hidden');
+        termsDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lastFocusedElement?.focus();
+    };
+
+    const openTermsDialog = () => {
+        if (!termsDialog) return;
+        lastFocusedElement = document.activeElement;
+        termsDialog.classList.remove('hidden');
+        termsDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('terms-close')?.focus();
+    };
+
+    termsTrigger?.addEventListener('click', openTermsDialog);
+    termsCloseControls?.forEach((control) => control.addEventListener('click', closeTermsDialog));
+    termsDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeTermsDialog();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getTermsFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            termsPanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    });
+
+    const privacyTrigger = document.getElementById('privacy-trigger');
+    const privacyDialog = document.getElementById('privacy-dialog');
+    const privacyPanel = privacyDialog?.querySelector('.terms-dialog-panel');
+    const privacyCloseControls = privacyDialog?.querySelectorAll('[data-privacy-close], #privacy-close');
+    let lastPrivacyFocusedElement;
+
+    const getPrivacyFocusableElements = () => privacyDialog ? Array.from(
+        privacyDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closePrivacyDialog = () => {
+        if (!privacyDialog) return;
+        privacyDialog.classList.add('hidden');
+        privacyDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lastPrivacyFocusedElement?.focus();
+    };
+
+    const openPrivacyDialog = () => {
+        if (!privacyDialog) return;
+        lastPrivacyFocusedElement = document.activeElement;
+        privacyDialog.classList.remove('hidden');
+        privacyDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('privacy-close')?.focus();
+    };
+
+    privacyTrigger?.addEventListener('click', openPrivacyDialog);
+    privacyCloseControls?.forEach((control) => control.addEventListener('click', closePrivacyDialog));
+    privacyDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closePrivacyDialog();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getPrivacyFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            privacyPanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    });
+
+    const literatureTrigger = document.getElementById('literature-trigger');
+    const literatureDialog = document.getElementById('literature-dialog');
+    const literaturePanel = literatureDialog?.querySelector('.terms-dialog-panel');
+    const literatureCloseControls = literatureDialog?.querySelectorAll('[data-literature-close], #literature-close');
+    let lastLiteratureFocusedElement;
+
+    const getLiteratureFocusableElements = () => literatureDialog ? Array.from(
+        literatureDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closeLiteratureDialog = () => {
+        if (!literatureDialog) return;
+        literatureDialog.classList.add('hidden');
+        literatureDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lastLiteratureFocusedElement?.focus();
+    };
+
+    const openLiteratureDialog = () => {
+        if (!literatureDialog) return;
+        lastLiteratureFocusedElement = document.activeElement;
+        literatureDialog.classList.remove('hidden');
+        literatureDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('literature-close')?.focus();
+    };
+
+    literatureTrigger?.addEventListener('click', openLiteratureDialog);
+    literatureCloseControls?.forEach((control) => control.addEventListener('click', closeLiteratureDialog));
+    literatureDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeLiteratureDialog();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getLiteratureFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            literaturePanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    });
+
+    const dedinhoTrigger = document.getElementById('dedinho-trigger');
+    const dedinhoDialog = document.getElementById('dedinho-dialog');
+    const dedinhoPanel = dedinhoDialog?.querySelector('.terms-dialog-panel');
+    const dedinhoCloseControls = dedinhoDialog?.querySelectorAll('[data-dedinho-close], #dedinho-close');
+    let lastDedinhoFocusedElement;
+
+    const getDedinhoFocusableElements = () => dedinhoDialog ? Array.from(
+        dedinhoDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closeDedinhoDialog = () => {
+        if (!dedinhoDialog) return;
+        dedinhoDialog.classList.add('hidden');
+        dedinhoDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lastDedinhoFocusedElement?.focus();
+    };
+
+    const openDedinhoDialog = () => {
+        if (!dedinhoDialog) return;
+        lastDedinhoFocusedElement = document.activeElement;
+        dedinhoDialog.classList.remove('hidden');
+        dedinhoDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('dedinho-close')?.focus();
+    };
+
+    dedinhoTrigger?.addEventListener('click', openDedinhoDialog);
+    dedinhoCloseControls?.forEach((control) => control.addEventListener('click', closeDedinhoDialog));
+    dedinhoDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeDedinhoDialog();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getDedinhoFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            dedinhoPanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    });
+
+    const communityTrigger = document.getElementById('community-trigger');
+    const communityDialog = document.getElementById('community-dialog');
+    const communityPanel = communityDialog?.querySelector('.terms-dialog-panel');
+    const communityCloseControls = communityDialog?.querySelectorAll('[data-community-close], #community-close');
+    let lastCommunityFocusedElement;
+
+    const getCommunityFocusableElements = () => communityDialog ? Array.from(
+        communityDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closeCommunityDialog = () => {
+        if (!communityDialog) return;
+        communityDialog.classList.add('hidden');
+        communityDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lastCommunityFocusedElement?.focus();
+    };
+
+    const openCommunityDialog = () => {
+        if (!communityDialog) return;
+        lastCommunityFocusedElement = document.activeElement;
+        communityDialog.classList.remove('hidden');
+        communityDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('community-close')?.focus();
+    };
+
+    communityTrigger?.addEventListener('click', openCommunityDialog);
+    communityCloseControls?.forEach((control) => control.addEventListener('click', closeCommunityDialog));
+    communityDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeCommunityDialog();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getCommunityFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            communityPanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    });
+
+    const catalogTrigger = document.getElementById('catalog-trigger');
+    const catalogDialog = document.getElementById('catalog-dialog');
+    const catalogPanel = catalogDialog?.querySelector('.terms-dialog-panel');
+    const catalogCloseControls = catalogDialog?.querySelectorAll('[data-catalog-close], #catalog-close');
+    let lastCatalogFocusedElement;
+
+    const getCatalogFocusableElements = () => catalogDialog ? Array.from(
+        catalogDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closeCatalogDialog = () => {
+        if (!catalogDialog) return;
+        catalogDialog.classList.add('hidden');
+        catalogDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lastCatalogFocusedElement?.focus();
+    };
+
+    const openCatalogDialog = () => {
+        if (!catalogDialog) return;
+        lastCatalogFocusedElement = document.activeElement;
+        catalogDialog.classList.remove('hidden');
+        catalogDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('catalog-close')?.focus();
+    };
+
+    catalogTrigger?.addEventListener('click', openCatalogDialog);
+    catalogCloseControls?.forEach((control) => control.addEventListener('click', closeCatalogDialog));
+    catalogDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeCatalogDialog();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getCatalogFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            catalogPanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    });
+
+    const pelasRuasAudio = document.getElementById('pelas-ruas-audio');
+    const pelasRuasAudioToggle = document.getElementById('pelas-ruas-audio-toggle');
+    const pelasRuasAudioIcon = document.getElementById('pelas-ruas-audio-icon');
+
+    const updatePelasRuasAudioControl = (isPlaying) => {
+        if (!pelasRuasAudioToggle || !pelasRuasAudioIcon) return;
+        pelasRuasAudioToggle.setAttribute('aria-pressed', String(isPlaying));
+        pelasRuasAudioToggle.setAttribute('aria-label', isPlaying ? 'Pausar Pelas Ruas do Rio' : 'Tocar Pelas Ruas do Rio');
+        pelasRuasAudioIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+    };
+
+    pelasRuasAudioToggle?.addEventListener('click', async () => {
+        if (!pelasRuasAudio) return;
+
+        if (pelasRuasAudio.paused) {
+            try {
+                await pelasRuasAudio.play();
+            } catch (error) {
+                updatePelasRuasAudioControl(false);
+            }
+        } else {
+            pelasRuasAudio.pause();
+        }
+    });
+
+    pelasRuasAudio?.addEventListener('play', () => updatePelasRuasAudioControl(true));
+    pelasRuasAudio?.addEventListener('pause', () => updatePelasRuasAudioControl(false));
+    pelasRuasAudio?.addEventListener('ended', () => updatePelasRuasAudioControl(false));
+    pelasRuasAudio?.addEventListener('error', () => updatePelasRuasAudioControl(false));
+
+        // Simple scroll spy for navbar shadow
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+    <script src="appointment-request.js"></script>
+</body></html>
