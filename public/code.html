@@ -243,7 +243,8 @@
         #dedinho-dialog > [data-dedinho-close],
         #community-dialog > [data-community-close],
         #privacy-dialog > [data-privacy-close],
-        #catalog-dialog > [data-catalog-close] {
+        #catalog-dialog > [data-catalog-close],
+        #launch-cta-dialog > [data-launch-cta-close] {
             background: rgba(30, 27, 26, 0.62);
         }
 
@@ -252,7 +253,8 @@
         #dedinho-dialog .terms-dialog-panel,
         #community-dialog .terms-dialog-panel,
         #privacy-dialog .terms-dialog-panel,
-        #catalog-dialog .terms-dialog-panel {
+        #catalog-dialog .terms-dialog-panel,
+        #launch-cta-dialog .terms-dialog-panel {
             color: #f6efed;
             background:
                 radial-gradient(circle at -4% -10%, rgba(240, 191, 107, 0.28) 0, rgba(240, 191, 107, 0.09) 25%, transparent 48%),
@@ -850,6 +852,26 @@
     </div>
 </div>
 </footer>
+<div id="launch-cta-dialog" class="fixed inset-0 z-[70] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="launch-cta-title" aria-describedby="launch-cta-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-launch-cta-close aria-label="Fechar aviso de lançamento"></button>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex w-full max-w-2xl flex-col overflow-hidden rounded-xl text-on-surface" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-inverse-primary/30 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-inverse-primary uppercase tracking-[0.2em]">Em breve</p>
+                <h2 id="launch-cta-title" class="font-headline-md text-headline-md mt-2 text-inverse-on-surface">Pelas Ruas do Rio</h2>
+            </div>
+            <button id="launch-cta-close" class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-inverse-primary transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" type="button" data-launch-cta-close aria-label="Fechar aviso de lançamento">
+                <span aria-hidden="true" class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="px-6 py-8 text-center sm:px-10 sm:py-10">
+            <p class="font-headline-md text-headline-md text-inverse-on-surface">NÃO É APENAS UM ÁLBUM.<br/>É UM CAMINHO EM FORMA DE CANÇÃO.</p>
+            <p id="launch-cta-summary" class="mt-6 font-body-lg text-body-lg text-surface-variant">“Pelas Ruas do Rio...” em breve estará em todas as plataformas digitais.</p>
+            <p class="mt-6 font-body-md text-body-md leading-relaxed text-surface-variant">Uma travessia de música, palavra, fé e verdade.<br/>Para ouvir com calma.<br/>Para guardar por perto.<br/>Para levar consigo.</p>
+            <p class="mt-8 font-label-md text-label-md uppercase tracking-[0.24em] text-inverse-primary">EM BREVE.</p>
+        </div>
+    </section>
+</div>
 <div id="appointment-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="appointment-title" aria-describedby="appointment-summary">
     <div class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" data-appointment-close aria-hidden="true"></div>
     <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-2xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
@@ -1233,6 +1255,64 @@
           button.setAttribute('aria-expanded', 'false');
         }
       });
+    });
+
+    const launchCtaDialog = document.getElementById('launch-cta-dialog');
+    const launchCtaPanel = launchCtaDialog?.querySelector('.terms-dialog-panel');
+    const launchCtaCloseControls = launchCtaDialog?.querySelectorAll('[data-launch-cta-close], #launch-cta-close');
+    const launchCtaEndDate = new Date(2026, 7, 31);
+    let launchCtaLastFocusedElement;
+
+    const getLaunchCtaFocusableElements = () => launchCtaDialog ? Array.from(
+        launchCtaDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closeLaunchCta = () => {
+        if (!launchCtaDialog || launchCtaDialog.classList.contains('hidden')) return;
+        launchCtaDialog.classList.add('hidden');
+        launchCtaDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        launchCtaLastFocusedElement?.focus();
+    };
+
+    const openLaunchCta = () => {
+        if (!launchCtaDialog) return;
+        launchCtaLastFocusedElement = document.activeElement;
+        launchCtaDialog.classList.remove('hidden');
+        launchCtaDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('launch-cta-close')?.focus();
+    };
+
+    if (new Date() < launchCtaEndDate) {
+        openLaunchCta();
+    }
+
+    launchCtaCloseControls?.forEach((control) => control.addEventListener('click', closeLaunchCta));
+    launchCtaDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeLaunchCta();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getLaunchCtaFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            launchCtaPanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
     });
 
     const mobileDrawer = document.getElementById('mobile-drawer');
