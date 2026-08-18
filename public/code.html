@@ -324,11 +324,40 @@
 </a>
 </div>
 <!-- Mobile Menu Button -->
-<button class="md:hidden text-primary transition-transform hover:scale-110">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+<button aria-controls="mobile-drawer" aria-expanded="false" aria-label="Abrir menu de navegação" class="md:hidden text-primary transition-transform hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" id="mobile-menu-trigger" type="button">
+<span aria-hidden="true" class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
 </button>
 </div>
 </nav>
+<!-- Mobile Navigation Drawer -->
+<div aria-hidden="true" class="fixed inset-0 z-[60] hidden md:hidden" id="mobile-drawer">
+<button aria-label="Fechar menu de navegação" class="absolute inset-0 h-full w-full cursor-default bg-[#1e1b1a]/80 backdrop-blur-sm" data-mobile-drawer-close type="button"></button>
+<aside aria-labelledby="mobile-drawer-title" aria-modal="true" class="editorial-graphite-card relative ml-auto flex h-full w-full max-w-sm flex-col overflow-y-auto px-8 py-8 sm:px-10" role="dialog" tabindex="-1">
+<div class="flex items-center justify-between border-b border-inverse-primary/25 pb-6">
+<p class="font-display-lg text-headline-md text-black" id="mobile-drawer-title">Wilma Machado</p>
+<button aria-label="Fechar menu" class="text-inverse-primary transition-transform hover:scale-110 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" id="mobile-drawer-close" type="button">
+<span aria-hidden="true" class="material-symbols-outlined">close</span>
+</button>
+</div>
+<nav aria-label="Navegação mobile" class="mt-8">
+<ul>
+<li><a class="block py-4 font-label-md text-label-md uppercase tracking-widest text-inverse-on-surface transition-colors hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="#inicio">Início</a></li>
+<li><a class="block py-4 font-label-md text-label-md uppercase tracking-widest text-inverse-on-surface transition-colors hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="#trajetoria">Trajetória</a></li>
+<li><a class="block py-4 font-label-md text-label-md uppercase tracking-widest text-inverse-on-surface transition-colors hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="#musicas">Músicas</a></li>
+<li><a class="block py-4 font-label-md text-label-md uppercase tracking-widest text-inverse-on-surface transition-colors hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="#obras">Obras</a></li>
+<li><a class="block py-4 font-label-md text-label-md uppercase tracking-widest text-inverse-on-surface transition-colors hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="https://www.youtube.com/@wilmamachado1233" rel="noopener noreferrer" target="_blank">Vídeos</a></li>
+<li><a class="block py-4 font-label-md text-label-md uppercase tracking-widest text-inverse-on-surface transition-colors hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="#contato">Contato</a></li>
+</ul>
+</nav>
+<div class="mt-auto pt-6">
+<p class="border-b border-inverse-primary/25 pb-4 font-label-md text-body-md uppercase tracking-widest text-black">Contato</p>
+<ul class="mt-3">
+<li><a class="block py-4 font-body-md text-body-md text-inverse-on-surface transition-colors hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="https://wa.me/5521970152448?text=Olá%21%20Conheci%20a%20landing%20page%20da%20Wilma%20Machado%20e%20gostaria%20de%20conversar%20com%20a%20assessoria%20sobre%20uma%20possível%20reunião%20ou%20agendamento." rel="noopener noreferrer" target="_blank">Assessoria</a></li>
+<li><a class="block py-4 font-body-md text-body-md text-inverse-on-surface transition-colors hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" href="mailto:wmciaproducaomusical@gmail.com">Contato WMCIA</a></li>
+</ul>
+</div>
+</aside>
+</div>
 <!-- Hero Section -->
 <section class="relative min-h-[921px] flex items-center overflow-hidden pt-24 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="inicio">
 <!-- Decorative background: non-interactive and intentionally behind the complete hero. -->
@@ -1203,6 +1232,71 @@
           button.setAttribute('aria-expanded', 'false');
         }
       });
+    });
+
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const mobileMenuTrigger = document.getElementById('mobile-menu-trigger');
+    const mobileDrawerPanel = mobileDrawer?.querySelector('[role="dialog"]');
+    const mobileDrawerCloseControls = mobileDrawer?.querySelectorAll('[data-mobile-drawer-close], #mobile-drawer-close');
+
+    const getMobileDrawerFocusableElements = () => mobileDrawer ? Array.from(
+        mobileDrawer.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closeMobileDrawer = () => {
+        if (!mobileDrawer || mobileDrawer.classList.contains('hidden')) return;
+        mobileDrawer.classList.add('hidden');
+        mobileDrawer.setAttribute('aria-hidden', 'true');
+        mobileMenuTrigger?.setAttribute('aria-expanded', 'false');
+        mobileMenuTrigger?.setAttribute('aria-label', 'Abrir menu de navegação');
+        document.body.classList.remove('overflow-hidden');
+        mobileMenuTrigger?.focus();
+    };
+
+    const openMobileDrawer = () => {
+        if (!mobileDrawer) return;
+        mobileDrawer.classList.remove('hidden');
+        mobileDrawer.setAttribute('aria-hidden', 'false');
+        mobileMenuTrigger?.setAttribute('aria-expanded', 'true');
+        mobileMenuTrigger?.setAttribute('aria-label', 'Fechar menu de navegação');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('mobile-drawer-close')?.focus();
+    };
+
+    mobileMenuTrigger?.addEventListener('click', () => {
+        if (mobileDrawer?.classList.contains('hidden')) {
+            openMobileDrawer();
+        } else {
+            closeMobileDrawer();
+        }
+    });
+
+    mobileDrawerCloseControls?.forEach((control) => control.addEventListener('click', closeMobileDrawer));
+    mobileDrawer?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMobileDrawer));
+    mobileDrawer?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeMobileDrawer();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getMobileDrawerFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            mobileDrawerPanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
     });
 
     const termsTrigger = document.getElementById('terms-trigger');
