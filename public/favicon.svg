@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #1e1b1a;
+        font-family: EdwardianScriptITC, 'Edwardian Script ITC';
+        font-size: 32.3px;
+        isolation: isolate;
+      }
+
+      .st1 {
+        fill: #fff8f6;
+        opacity: 0;
+        stroke: #303030;
+        stroke-width: .2px;
+      }
+
+      .st2 {
+        stroke: url(#Gradiente_sem_nome_16);
+      }
+
+      .st2, .st3 {
+        fill: none;
+        stroke-width: 2px;
+      }
+
+      .st3 {
+        stroke: #b58a3c;
+      }
+    </style>
+    <linearGradient id="Gradiente_sem_nome_16" data-name="Gradiente sem nome 16" x1="7.6" y1="55" x2="56.6" y2="9.4" gradientUnits="userSpaceOnUse">
+      <stop offset=".7" stop-color="#b58a3c"/>
+      <stop offset=".8" stop-color="#b3883b" stop-opacity="1"/>
+      <stop offset=".9" stop-color="#ad843a" stop-opacity="1"/>
+      <stop offset=".9" stop-color="#a37d38" stop-opacity=".9"/>
+      <stop offset=".9" stop-color="#957335" stop-opacity=".8"/>
+      <stop offset=".9" stop-color="#836631" stop-opacity=".7"/>
+      <stop offset="1" stop-color="#6c552c" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#514226" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#322c1f" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#1d1d1b" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect class="st1" x="1.8" y="1.2" width="60.7" height="62" rx="16" ry="16"/>
+  <rect class="st3" x="5.6" y="5.2" width="53" height="54.1" rx="13" ry="13"/>
+  <text class="st0" transform="translate(6.6 68.2) rotate(-35.4) skewX(-1.2)"><tspan x="0" y="0">WM</tspan></text>
+  <rect class="st2" x="5.6" y="5.2" width="53" height="54.1" rx="13" ry="13"/>
+</svg>
