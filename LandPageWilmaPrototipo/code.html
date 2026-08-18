@@ -167,6 +167,24 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
+        .trajectory-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(181, 138, 60, 0.55) transparent;
+        }
+
+        .trajectory-scroll::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .trajectory-scroll::-webkit-scrollbar-thumb {
+            background: rgba(181, 138, 60, 0.55);
+            border-radius: 999px;
+        }
+
+        .trajectory-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
         
         .pauta-bg {
             background-color: #f1e5d4;
@@ -223,7 +241,8 @@
         #literature-dialog > [data-literature-close],
         #dedinho-dialog > [data-dedinho-close],
         #community-dialog > [data-community-close],
-        #privacy-dialog > [data-privacy-close] {
+        #privacy-dialog > [data-privacy-close],
+        #catalog-dialog > [data-catalog-close] {
             background: rgba(30, 27, 26, 0.62);
         }
 
@@ -231,7 +250,8 @@
         #literature-dialog .terms-dialog-panel,
         #dedinho-dialog .terms-dialog-panel,
         #community-dialog .terms-dialog-panel,
-        #privacy-dialog .terms-dialog-panel {
+        #privacy-dialog .terms-dialog-panel,
+        #catalog-dialog .terms-dialog-panel {
             color: #f6efed;
             background:
                 radial-gradient(circle at -4% -10%, rgba(240, 191, 107, 0.28) 0, rgba(240, 191, 107, 0.09) 25%, transparent 48%),
@@ -498,7 +518,9 @@
 <h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-widest text-sm">Trajetória</h2>
 <span class="h-px w-12 bg-primary"></span>
 </div>
-<div class="relative max-w-4xl mx-auto py-10">
+<div class="trajectory-scroll-frame relative max-w-4xl mx-auto">
+<div id="trajectory-scroll" class="trajectory-scroll relative h-[36rem] overflow-y-auto pr-2 sm:h-[40rem] md:h-[42rem] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary" tabindex="0" role="region" aria-label="Cronologia da trajetória de Wilma Machado. Use a rolagem para consultar os marcos.">
+<div class="relative py-10">
 <div class="timeline-line hidden md:block"></div>
 <div class="space-y-24">
 <!-- Event 1 -->
@@ -612,6 +634,10 @@
 <div class="md:w-5/12"></div>
 </div>
 </div>
+ </div>
+</div>
+<div class="pointer-events-none absolute inset-x-0 top-0 z-20 h-12 bg-gradient-to-b from-surface-container-low via-surface-container-low/75 to-transparent" aria-hidden="true"></div>
+<div class="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-12 bg-gradient-to-t from-surface-container-low via-surface-container-low/75 to-transparent" aria-hidden="true"></div>
 </div>
 </div>
 </section>
@@ -683,7 +709,7 @@
 <p class="font-body-lg text-body-lg text-surface-variant mb-8 opacity-90">
                     Composições exclusivas aguardando vozes e produtores. Um catálogo rico em poesia e profundidade espiritual para o seu próximo projeto.
                 </p>
-<button class="bg-inverse-primary text-on-primary-container px-8 py-4 rounded hover:bg-primary-fixed-dim transition-all duration-300 font-label-md text-label-md uppercase tracking-widest w-full sm:w-auto hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(240,191,107,0.2)]">
+<button id="catalog-trigger" class="bg-inverse-primary text-on-primary-container px-8 py-4 rounded hover:bg-primary-fixed-dim transition-all duration-300 font-label-md text-label-md uppercase tracking-widest w-full sm:w-auto hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(240,191,107,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-inverse-primary" type="button" aria-haspopup="dialog" aria-controls="catalog-dialog">
                     Acessar Catálogo
                 </button>
 </div>
@@ -1053,6 +1079,48 @@
         </div>
     </section>
 </div>
+<div id="catalog-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="catalog-title" aria-describedby="catalog-summary">
+    <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-catalog-close aria-label="Fechar catálogo de músicas para licenciamento"></button>
+    <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
+        <div class="flex items-start justify-between gap-6 border-b border-inverse-primary/30 px-6 py-5 sm:px-8 sm:py-6">
+            <div>
+                <p class="font-label-md text-label-md text-inverse-primary uppercase tracking-[0.2em]">WMCIA</p>
+                <h2 id="catalog-title" class="font-headline-md text-headline-md mt-2 text-inverse-on-surface">Músicas para Licenciamento</h2>
+            </div>
+            <button id="catalog-close" class="-mr-2 -mt-2 rounded-full p-2 text-surface-variant transition-colors duration-300 hover:bg-white/10 hover:text-inverse-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-inverse-primary" type="button" aria-label="Fechar catálogo de músicas para licenciamento">
+                <span class="material-symbols-outlined text-xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <div class="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
+            <p id="catalog-summary" class="font-body-md text-body-md text-surface-variant">Há canções que nascem para encontrar uma voz — e este catálogo reúne composições de Wilma Machado preparadas para ganhar novos intérpretes, arranjos e caminhos.</p>
+            <p class="mt-4 font-body-md text-body-md text-surface-variant">São obras de inspiração cristã, com mensagens de fé, acolhimento, adoração e esperança. Cada título possui uma identidade própria e pode se transformar em um novo projeto musical por meio de concessão e licenciamento.</p>
+            <div class="mt-7 space-y-8 font-body-md text-body-md text-surface-variant">
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Para momentos de fé e entrega</h3>
+                    <ul class="mt-4 space-y-3" role="list">
+                        <li><strong class="font-bold text-inverse-on-surface">Somente o Teu Amor</strong> — uma canção sobre a força e a presença do amor de Deus.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Ainda É Tempo</strong> — um convite à renovação, à esperança e a novos começos.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Jesus Cristo É o Senhor</strong> — uma declaração direta de louvor e fé.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Perfeitos Adoradores</strong> — uma canção voltada à adoração e à vida de entrega.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Dá-me Seu Coração</strong> — uma mensagem de aproximação, transformação e comunhão.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Vem, Senhor!</strong> — uma oração em forma de música, marcada pela expectativa e devoção.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3 class="font-title-md text-title-md text-inverse-on-surface">Para celebrar, acolher e inspirar</h3>
+                    <ul class="mt-4 space-y-3" role="list">
+                        <li><strong class="font-bold text-inverse-on-surface">Deixar Criança Ser Criança</strong> — uma obra com olhar sensível para a infância, a leveza e o cuidado.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Benção Especial</strong> — uma canção de afeto, gratidão e palavras que desejam bem.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Seja Bem-vindo Meu Irmão</strong> — uma música de acolhimento, comunhão e celebração da chegada.</li>
+                        <li><strong class="font-bold text-inverse-on-surface">Doce Alegria</strong> — uma composição luminosa, pensada para transmitir felicidade e esperança.</li>
+                    </ul>
+                </section>
+            </div>
+            <p class="mt-8 border-t border-inverse-primary/25 pt-5 font-body-md text-body-md text-surface-variant">Este é um catálogo aberto a novas interpretações. As composições estão disponíveis para artistas, músicos, produtores e ministérios que desejem desenvolver projetos com letras de profundidade espiritual e identidade cristã.</p>
+            <p class="mt-4 font-body-md text-body-md text-surface-variant">Para conhecer as condições de concessão e licenciamento, entre em contato com a WMCIA — Produção Musical e Literária.</p>
+        </div>
+    </section>
+</div>
 <div id="terms-dialog" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6" role="dialog" aria-modal="true" aria-labelledby="terms-title" aria-describedby="terms-summary">
     <button class="absolute inset-0 h-full w-full cursor-default bg-inverse-surface/45 backdrop-blur-sm" type="button" data-terms-close aria-label="Fechar termos de uso"></button>
     <section class="terms-dialog-panel editorial-graphite-card relative flex max-h-[calc(100dvh-2rem)] w-full max-w-2xl flex-col overflow-hidden rounded-xl text-on-surface sm:max-h-[calc(100dvh-3rem)]" tabindex="-1">
@@ -1371,6 +1439,61 @@
         if (!focusableElements.length) {
             event.preventDefault();
             communityPanel?.focus();
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    });
+
+    const catalogTrigger = document.getElementById('catalog-trigger');
+    const catalogDialog = document.getElementById('catalog-dialog');
+    const catalogPanel = catalogDialog?.querySelector('.terms-dialog-panel');
+    const catalogCloseControls = catalogDialog?.querySelectorAll('[data-catalog-close], #catalog-close');
+    let lastCatalogFocusedElement;
+
+    const getCatalogFocusableElements = () => catalogDialog ? Array.from(
+        catalogDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+    ).filter((element) => !element.hidden) : [];
+
+    const closeCatalogDialog = () => {
+        if (!catalogDialog) return;
+        catalogDialog.classList.add('hidden');
+        catalogDialog.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
+        lastCatalogFocusedElement?.focus();
+    };
+
+    const openCatalogDialog = () => {
+        if (!catalogDialog) return;
+        lastCatalogFocusedElement = document.activeElement;
+        catalogDialog.classList.remove('hidden');
+        catalogDialog.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
+        document.getElementById('catalog-close')?.focus();
+    };
+
+    catalogTrigger?.addEventListener('click', openCatalogDialog);
+    catalogCloseControls?.forEach((control) => control.addEventListener('click', closeCatalogDialog));
+    catalogDialog?.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            event.preventDefault();
+            closeCatalogDialog();
+            return;
+        }
+
+        if (event.key !== 'Tab') return;
+        const focusableElements = getCatalogFocusableElements();
+        if (!focusableElements.length) {
+            event.preventDefault();
+            catalogPanel?.focus();
             return;
         }
 
